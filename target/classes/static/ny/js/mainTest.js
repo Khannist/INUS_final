@@ -5,13 +5,13 @@
  
  type : post body json
 url : http://localhost:1231/MAIN
- */
+ 
 data : 
 
 {
   "idx": "1",
   "image" : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAzUExURQAAABAgMBggOBUgNRgcOBYdNhgdOBceNxYeOBceNxYeOBcfNxcdOBceNxceOBceNxceOLFQWucAAAAQdFJOUwAQIDBAUGBwgI+fr7/P3+8jGoKKAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAByklEQVRoQ+3Y0XKDIBAF0BCxARHw/7+2E71OTcKyumw7feA8JndujEKA3Lqu67q/ZaybY84xeItXVBmflx/+jpe1vNY/ebyjwwTUHkSDNxUMCaUv8oC3m5mIyjdZ6TuU7s8mItHIoa7AIdLEvI+fg6wxWitfYFkmhFoUR9AuI9RgRBXhCzG56h3SuEfkGN3MiMkRk2zX/hCqz1jjAyqzYIWYHHOLEmJyM5oI7T9HHk2E9mHKTLQRsQbVp6yxJEzoKgoItTDoKtFZNX97walMBa2NhSF+LlTWs9VQHElZYYjuShuXqLt7fKB2l53ixm5ljvMhz9qb39Xo57TkFMOoffXdv2Dsw/vwPKOlOUzOqR7T7qOLn3M5Tg+VsWpdZdlPrYdBU2vfhIbdqf04WpYF2QOxzIblKF3/GsPJq9/Fax/xee7mXfn5tuyjLTm/AAkuf3Py74X3teWCU5/wJb3+pxN36d7Svyz8k2YOfRz+Jl2YXiX8gYQ5k3H4MxuCYqihISeGGhpyYqihISeGGhpyYqihISeGGhpyYqihISeGGhpyYqihISeGGhpyYqihISeGGhpyYqihISeGGhpyYqihISeGmq7ruk7R7fYNxnmhp0mQS0oAAAAASUVORK5CYII"
-}
+} */
  
  
  function requestGet(){
