@@ -42,7 +42,10 @@ public class NYController {
          return "Set";
       }
 	   
-	   
+	   @RequestMapping("/userReWrite")
+      public String userReWriteController() {
+         return "NY/ProfileRewrite";
+      }
 	   
 	   
 }

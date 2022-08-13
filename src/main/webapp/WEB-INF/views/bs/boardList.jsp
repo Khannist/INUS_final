@@ -25,6 +25,7 @@
  <sec:authorize access="isAuthenticated()">
 	<sec:authentication property="principal.userId" var="userid" />
 	<sec:authentication property="principal.nickname" var="username" />
+	<sec:authentication property="principal.email" var="useremail" />
 	<input type="hidden" id="userId" name="userId" value="${userid}">
 	<input type="hidden" name="username" id="username" value="${username}">
 </sec:authorize>
@@ -42,40 +43,53 @@
       <div class="chatAndFriendheader">
          <div class="ChatList">
             <div class="headerP" >
-               <p id="ChatName">채팅방이름</p>
-               <img class="ChatAndFriend_Icon" id="chatIcon" src="bs/css/image/ChatListIcon.png" onclick="F_openrReplace()">
-               <img class="ChatAndFriend_Icon" id="chatIcon_2" style="display: none;" src="bs/css/image/ChatListIcon_2.png" onclick="F_closeReplace()">
+               <p id="ChatName">친구리스트</p>
+               <img class="ChatAndFriend_Icon" id="chatIcon" src="bs/css/image/ChatListIcon.png" onclick="F_openFReReplace()">
+               <img class="ChatAndFriend_Icon" id="chatIcon_2" style="display: none;" src="bs/image/ChatListIcon_2.png" onclick="F_closeFReReplace()">
             </div>
             <!-- 채팅방이름 7자 이내 -->
          </div>
-         <div class="ServerReplace">
-            <ul>
-               <li>초대하기</li>
-               <li>채팅방 만들기</li>
-               <li>서버 나가기</li>
-            </ul>
+        <div class="FriendReplace" style="display: none;">	<!-- 나연// 수정부분0813[1/2] -->
+			<div>
+				<p>친구추가</p><br><br>
+               		<input type="text" id="friendAdd" placeholder="친구아이디">
+			</div>
                <div id="inputNameSpace" style="display:none;"><!-- 확인 -->
-                  <input type="text" id="roomName"><br>
+                  
                   <input type="button" value="생성">
                </div>
          </div>
-               <div class="fixProifle">
-                  <div id="fixProfile_1">
-                     <img src="https://source.unsplash.com/random">
-                  </div>
-                  <div id="ProfileFixText">
-                     <p id="fixProfile_2">나요네즈<br>
-                     <span>#6090</span>
-                     </p>
-                  </div>  
-                  <a href="/SET">
-                     <img id="setIcon"src="bs/css/image/setting.png">
-                  </a>
-               </div>   
+               
        </div>
    </div>
    </article>
 </div>
+
+<script type="text/javascript">
+//친구리스트 설정 페이지 나타남
+function F_openFReReplace(){
+    document.querySelector('.FriendReplace').style.display = "block";   //서버 수정 페이지 나타남
+    document.querySelector('#chatIcon_2').style.display = "block";   //닫히는 아이콘 나타남
+    document.querySelector('#chatIcon').style.display = "none";   //열리는 아이콘 없어짐
+
+}
+//친구리스트 설정 페이지 없어짐
+function F_closeFReReplace(){
+    document.querySelector('.FriendReplace').style.display = "none";   //서버 수정 페이지 없어짐
+    document.querySelector('#chatIcon_2').style.display = "none";         //열리는 아이콘 나타남
+    document.querySelector('#chatIcon').style.display = "block";      //닫히는 아이콘 없어짐  
+}
+//친구 삭제 나타남
+function F_closeFReReplace(){
+    document.querySelector('.FriendReplace').style.display = "none";   //서버 수정 페이지 없어짐
+    document.querySelector('#chatIcon_2').style.display = "none";         //열리는 아이콘 나타남
+    document.querySelector('#chatIcon').style.display = "block";      //닫히는 아이콘 없어짐  
+}
+</script>
+
+
+
+
 <article>
 <!-- feed -->
 <div class="device">   
@@ -168,16 +182,16 @@
      data-aos-duration="3000">
       <center>
         <img src="https://source.unsplash.com/random" class="profile_image" alt="">
-        <h4>Jessica</h4>
+        <h4>${username}</h4>
       </center>
       <div data-aos="flip-left"
      data-aos-duration="3000">
-      <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-      <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
-      <a href="#"><i class="fas fa-table"></i><span>Tables</span></a>
-      <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
-      <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
-      <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+      <a href="#"><i class="fas fa-desktop"></i><span>${userid}</span></a>
+      <a href="#"><i class="fas fa-cogs"></i><span>${useremail}</span></a>
+      <a href="#"><i class="fas fa-table"></i><span>이</span></a>
+      <a href="#"><i class="fas fa-th"></i><span>거</span></a>
+      <a href="#"><i class="fas fa-info-circle"></i><span>지워주세유</span></a>
+      <a href="/SET"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
       </div>
       <div class="snsBtn" data-aos="fade-down"
      data-aos-duration="3000">
