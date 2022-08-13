@@ -19,6 +19,7 @@ public class CustomUserDetails implements UserDetails {
 	private String userId;
 	private String password;
 	private String nickname;
+	private String email;
 	private String role;
 	
 	// 계정이 가지고있는 권한을 리턴
