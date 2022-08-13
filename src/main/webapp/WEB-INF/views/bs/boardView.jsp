@@ -2,37 +2,39 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>메인화면</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <link type="text/css" rel="stylesheet" href="bs/css/inus.css">
 <link type="text/css" rel="stylesheet" href="bs/css/comment.css">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://kit.fontawesome.com/0535b153a9.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<link  rel="stylesheet" type="text/css" href="ch/css/channel.css">
 </head>
 <header>
 <img src="bs/css/image/last_logo.jpg" id="logo">
 </header>
 <body>
+ <sec:authorize access="isAuthenticated()">
+	<sec:authentication property="principal.userId" var="userid" />
+	<sec:authentication property="principal.nickname" var="username" />
+	<input type="hidden" id="userId" name="userId" value="${userid}">
+	<input type="hidden" name="username" id="username" value="${username}">
+</sec:authorize>
 <section>
 <div class="MainLbar">
    <article>
    <div class="ServerList">
          <div id="serverCount">   <!-- 필요없어보인다고 지우면 안됌 -->
-         <ul>
-            <li>
-               <img class="serverImg" src="https://source.unsplash.com/random">   
-            </li>
-            <li>
-               <a href="/AddServer">
-               <img class="serverImg" id="plusServerImg" src="https://source.unsplash.com/random">
-               </a>
-            </li>
-         </ul>
+         	<jsp:include page="../ch/roomchannel/roomChannel.jsp"></jsp:include>
          </div>
    </div>
    <div class="ChatAndFriendList">
@@ -202,6 +204,8 @@
 <script type="text/javascript">
   AOS.init();
 </script>
+<jsp:include page="../ch/roomchannel/addChannel.jsp"></jsp:include>
+<script type="text/javascript" src="/ch/js/channel/mainchannel.js"></script>
 <script type="text/javascript" src="bs/js/reply.js"></script>
 </body>
 </html>

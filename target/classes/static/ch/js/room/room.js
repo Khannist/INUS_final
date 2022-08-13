@@ -136,7 +136,7 @@ function createChat(res) {
 			disconnect();
 			connect();
 		}
-		$("#chating").append(tag);
+		$("#chating").empty().append(tag);
          $('#chating').scrollTop($('#chating').prop('scrollHeight'));
 	}
 }

@@ -5,6 +5,7 @@ import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +45,8 @@ public class StompController {
 		chat.setChatDate(tstp);
 		ss.insert("ChatMapper.chattiing", chat);
 		HashMap<String, Object> payload = new HashMap<>();
-		payload.put("list", chat);
+		List<Chat> list = ss.selectList("ChatMapper.getChat", chat);
+		payload.put("list", list);
 		smt.convertAndSend("/topic/" + chat.getChannelCode() + "/" + chat.getRoomCode(), payload);
 	}
  }
