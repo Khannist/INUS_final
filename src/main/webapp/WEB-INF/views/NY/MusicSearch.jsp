@@ -7,8 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
-
+ <script src="https://code.jquery.com/jquery-3.6.0.js"
+	integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <link href="NY/css/MusicSearch.css" rel="stylesheet">
 </head>
 <body>
@@ -27,11 +27,14 @@
 	    <img class="ToIMG" id="ToMusic" src="NY/img/icon/ToMusicList.png" onclick="F_ToFriendList()">
 	</div>
 	<div class="ScrollClass">
+		<div class="iframe01_li">
+		</div>
 		<ul>
+
 		<c:forTokens var="item" items="0,1,2,3,4,5,6,7,8,9" delims=",">
 		    <li >
 				<div class="ThAndTi" id="search${item}">
-					<div class="searchIframe" id="search${item}_iframe"></div>
+					<div class="searchIframe" id="search${item}_img"></div>
 		            <div id="textPart">
 		            	<div class="text01" id="search${item}_text01"></div>
 		            	<div class="text02" id="search${item}_text02"></div>
@@ -43,11 +46,8 @@
 			
 		</ul>
 	</div>
- <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
 <script type="text/javascript">
-
-
 
 function Search(){
 
@@ -56,20 +56,76 @@ function Search(){
     $.ajax({
         method: "GET",
         url: "https://www.googleapis.com/youtube/v3/search",
-        data: { part: "snippet", maxResults:"10", q:SearchBtn, key :"AIzaSyDXeAzX5Ec2q8DE2b9pcHx-26u5inDMHVM"}
+        data: { part: "snippet", maxResults:"10", q:SearchBtn, key :"AIzaSyBLGX74Zs1Yx0xUG_miWKA5Pz0As9mkz0o"}
     })
     .done(function (msg) {
         console.log(msg);
         //alert("Data Saved: " + msg);
         for(var i = 0; i <= 9; i++) {
-        	 $( "#search"+ i +"_iframe" ).empty().append( '<iframe width="560" height="315" src="https://www.youtube.com/embed/'+msg.items[i].id.videoId+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' );
-             //$( "#search01_img" ).empty().append( "<img src='"+msg.items[0].snippet.thumbnails.default.url+"'/>" );
+        	 $( "#search"+ i +"_img" ).empty().append( "<img src='"+msg.items[i].snippet.thumbnails.default.url+"'/>" );
              $( "#search"+ i +"_text01" ).empty().append( "<p>"+msg.items[i].snippet.title+"</p>" );
              $( "#search"+ i +"_text02" ).empty().append( "<p>"+msg.items[i].snippet.channelTitle+"</p>" );
              $( "#search"+ i +"_text03" ).empty().append( "<p>"+msg.items[i].snippet.description+"</p>" );
-        }
-        });
-}
+             //$( ".iframe01_li" ).empty().append( '<iframe id="search'+i+'_img" width="560" height="315" src="https://www.youtube.com/embed/'+msg.items[i].id.videoId+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' );
+             var src = "https://www.youtube.com/embed/"+msg.items[i].id.videoId+"";
+             $("#search"+i+"_img").attr("onclick" , "videoIframe(\""+src+"\")")
+             }; 
+        })
+	};
+
+
+function videoIframe(src){
+	console.log(src);
+	//document.getElementById(res).style.display = "block";
+	//$("#"+res).text("DOM이 완성되었습니다. 코드를 작성해주세요!"); 텍스트 들어감
+	 $(".iframe01_li" ).attr("style","display:block");
+	 $( ".iframe01_li" ).empty().append( '<iframe width="560" height="315" src="'+src+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' );
+	/*	$("#"+res).css({'display': 'block'});
+ 	for(var i = 0; i <= 9; i++) {
+   	        
+        $("#search"+ i +"_img").click(function(){
+    		//$(".iframe01").hide();
+    		//$("search"+ i +"_iframe").fadeIn( 2000 );
+    		
+        } );
+   } */
+};
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 </body>
 </html>
