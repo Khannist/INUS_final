@@ -6,23 +6,23 @@ window.onload = function() {
 	getChannel();
 }
 
-function getChannel(){
+function getChannel(){ // 채널 리스트 출력
 	var msg = { userId : $('#userId').val()	};
 	commonAjax('/getChannel', msg , 'post', function(result){
 		createChatingChannel(result);
 	});
 }
 
-function createServer(){	
+function createServer(){	// 클릭시 채널 생성페이지
 	var con = document.getElementById("channelNameInput");
     con.style.display = (con.style.display != 'none') ? "none" : "inline-block";
 }
 		
-function channelCreateName(){
-	if($("#channelName").val() == null || $('#channelName').val() == ""){
+function channelCreateName(){ // 채널 생성
+	if($("#channelName").val() == null || $('#channelName').val() == ""){ // 입력값이 비었을때
 		$("#channelName").attr("placeholder", "이름을 입력해주세요!");
 		$("#channelName").focus();
-	}else {
+	}else { // 입력값이 있을떄
 		var msg = {
 		channelName : $('input#channelName').val(),
 		userId : $('#userId').val()
@@ -62,11 +62,11 @@ function goChannel(code, name, id, chanName){
 }
 
 function createChatingChannel(res){
-	if(res != null){
+	if(res != null){ // 채팅방이 있을시
 		var tag = "";
-		if(res.list) {
-			res.list.forEach(function(d, idx){
-				$("#channelCode").val(d.channelCode);
+		if(res.list) { // res에 list 리스트가 있을시
+			res.list.forEach(function(d){ // 길이만큼 반복
+				$("#channelCode").val(d.channelCode); // d번째 channelCode값 입력
 				var cn = d.channelName;
 				tag += "<li onclick='goChannel(\""+d.channelCode+"\", \""+cn+"\",\""+d.userId+"\",\""+d.channelList+"\")' "+
 				" id='"+ d.channelList +"' class='channel'>"+

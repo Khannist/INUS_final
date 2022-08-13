@@ -12,10 +12,11 @@ function getChannel(){
 	});
 }
 
-function createRoomName() {
+function createRoomName(res) {
 	var roomName = "main";
+	var resNum = res.list.length-1;
 	var msg = {
-		channelCode : $('#channelCode').val(),	
+		channelCode : res.list[resNum].channelCode,	
 		roomName : roomName ,
 		userId : $('#userId').val()	
 	};
@@ -43,11 +44,13 @@ function channelCreateName(){
 		};
 		commonAjax('/createChannel', msg, 'post', function(result){
 			createChatingChannel(result);
+			createRoomName(result);
 		});
 		
 		document.getElementById("channelNameInput").style.display = "none";
 		$("input#channelName").val("");
 		$("#channelName").attr("placeholder", "채널 이름 입력");
+		
 	}
 }
 
@@ -55,7 +58,7 @@ function createChatingChannel(res){
 	if(res != null){
 		var tag = "";
 		if(res.list) {
-			res.list.forEach(function(d, idx){
+			res.list.forEach(function(d){
 				$("#channelCode").val(d.channelCode);
 				tag += "<li onclick=\"location.href='serverMove?channelList=" + d.channelList + "&userId="+ $("#userId").val() +"'\""+
 				" id='"+ d.channelList +"' class='channel'>"+
