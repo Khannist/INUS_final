@@ -225,7 +225,7 @@
 						<p>정말로 로그아웃 하시겠어요?</p>
 						<div id="CheckLogout">
 							<button class="logOutClass" id="LogOutFake" onclick="LogOutFakeBtn()">취소</button>
-							<button class="logOutClass" id="LogOutReal">로그아웃</button>
+							<a href="/doLogout"><button class="logOutClass" id="LogOutReal">로그아웃</button></a>
 						</div>
 					</div>	
 		</div>

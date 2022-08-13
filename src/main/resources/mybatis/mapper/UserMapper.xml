@@ -5,18 +5,15 @@
 <mapper namespace="com.inus.sh.dao.UserMapper">
 
 	<update id="modifyInfo">
-	    UPDATE DL_USER SET
+	     UPDATE memberManage_tbl SET
 	    
-	    <if test="valueType == 'password'">
-	        PASSWORD = #{value }
-	    </if>
+	        PASSWORD = #{password}
 	    
-	    <if test="valueType == 'nickname'">
-	        NICKNAME = #{value }		
-	    </if>
+	        NICKNAME = #{nickname}		
 	    
-	    
-	    WHERE	USERNAME = #{username} 
+	    	EMAIL = #{email}
+	    	
+	    	WHERE USERNAME = #{username}
 	</update>
 	
 </mapper>

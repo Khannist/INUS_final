@@ -17,11 +17,13 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.inus.sh.Dto.SignupDto;
 import com.inus.sh.config.auth.CustomUserDetails;
+import com.inus.sh.service.UserService;
 import com.inus.sh.utils.Script;
 
 @RestController
@@ -31,7 +33,8 @@ public class AuthController {
 	private SqlSession sqlSession;
 	@Autowired
 	BCryptPasswordEncoder bCryptPasswordEncoder;
-
+	@Autowired
+	UserService userService;
 	
 	
 	@GetMapping("/login")
@@ -116,4 +119,32 @@ public class AuthController {
 	    return result; 
 	    
 	}
+	
+	 //회원정보 수정 처리
+	 
+	  @PostMapping("/myInfo") 
+	  public String myInfo (
+		  @RequestParam("password") String passwordout,
+		  @RequestParam("nickname") String nickname,
+		  @RequestParam("email") String email, 
+		  Model model) throws Exception {
+		  
+		  String password = bCryptPasswordEncoder.encode(passwordout);
+		  
+		  CustomUserDetails customUserDetails = new CustomUserDetails();
+		  
+		  customUserDetails.setPassword(password);
+		  customUserDetails.setNickname(nickname); 
+		  customUserDetails.setEmail(email);
+		  
+		  userService.modifyInfo(customUserDetails);
+		  
+		  model.addAttribute("myInfo","info");
+		  model.addAttribute("customUserDetails", customUserDetails);
+	  
+	  
+	  return "sh/jsp/myInfo"; 
+	  
+	  }
+	 
 }

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>프로필 수정</title>
 </head>
 <body>
  
@@ -18,7 +18,7 @@
 		    <div class="info_box">
 		    	
 				<h2>닉네임</h2>
-				<div class="user_nickname">${principal.nickname }</div>		    	
+				<div class="user_nickname">${principal.nickname}</div>		    	
 		    	
 	    		<h2>비밀번호</h2>
 		    	<div>
@@ -62,10 +62,6 @@
 	    </main>
     </div>
     
-    
-	
-	<script type="text/javascript" src="/js/user/myInfo.js" ></script>
- 	<script type="text/javascript" src="/js/utils/util.js" ></script>
     
 </body>
 </html>
