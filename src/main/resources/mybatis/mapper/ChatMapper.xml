@@ -104,7 +104,7 @@
  	<!-- 채널 삭제 -->
  	<delete id="delChannelUser" parameterType="com.inus.ch.server.room.vo.Channel">
  		DELETE FROM ChannelHasUser_dt
- 		WHERE channelCode = #{channelCode}
+ 		WHERE channelCode = #{channelCode} AND userId = #{userId}
  	</delete>
  	<delete id="delChannel" parameterType="com.inus.ch.server.room.vo.Channel">
  		DELETE FROM Channel_dt
