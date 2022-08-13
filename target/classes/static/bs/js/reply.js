@@ -13,7 +13,6 @@ function getTest() {
 			inus_boardNum:document.getElementById("inus_boardNum").value, // 게시판 번호를 가져온다. 
 			inus_CmWriter: document.getElementById("inus_userName").value, // 로그인 기능이 없으므로 게시글 작성자 컬럼명을 가져와 사용
 			inus_CmContent:$("#inus_CmContent").val() // 작성하는 내용을 벨류값으로 가져온다.
-			
 		}
 		
 		commonajax("/comment/InsertComment", msg, "get", function(result){

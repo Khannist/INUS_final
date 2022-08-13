@@ -115,12 +115,19 @@
 .searchIframe{
 	float: left;
 }
-.textPart{
-	float: left;
+#textPart{
+	margin-left: 167px;
 }
 .MusicSearch li{
 	clear: both;
+	height: 0px;
 }
+
+ .iframe01_li{
+	display: none;
+	margin: auto auto 320px 20px;
+}
+
 .searchIframe iframe{
 	width: 200px;
 	height: 110px;
@@ -131,21 +138,30 @@
 	height: 100px;
 	clear: both;
 }
+.searchIframe img{
+	width: 158px;
+    height: 113px;
+}
 .text01 p{
 	word-wrap: break-word;
 	/*word-break: break-all; 둘다 vs에서 먹힘*/
 	font-weight: bold;
 	font-size: 15px;
+	text-overflow: ellipsis;
 }
 .text02 p{
 	font-size: 14px;
 	margin: 6px 0px 10px 0px;
+	text-overflow: ellipsis;
 }
 .text03 p{
 	font-size: 10px;
+	text-overflow: ellipsis;
 }
 
 .ScrollClass::-webkit-scrollbar{
     display: none; 
 }
-
+.iframe01_li{
+	height: 1px;
+}

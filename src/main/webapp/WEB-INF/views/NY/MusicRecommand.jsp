@@ -32,6 +32,17 @@
 			allowfullscreen
 			></iframe>
 		</div>
+		<div class="videopart" >
+			<iframe
+			id = "def"
+			width="560"
+			height="315" 
+			src="https://www.youtube.com/embed/videoseries?list=PLoA-ETv-zYwncop1d3HZV7AIiGK8rLWaT&feature=share" 
+			frameborder="0" 
+			allow="autoplay; encrypted-media" 
+			allowfullscreen
+			></iframe>
+		</div>
 	</div>
 	<div class="RecommandPlayList">
 	
@@ -45,32 +56,25 @@
 			</div>
 			<ul>
 				<li>
-
 					<img src="ny/img/PageImg/koreaTOP100.png" class="top100Img" id="top100Img_1" onclick="showVideo01()">
-
-					<img src="NY/img/PageImg/koreaTOP100.png" class="top100Img" id="top100Img_1" onclick="showVideo01()">
 					<p>KoreaTop100</p>
-					<!-- https://music.youtube.com/playlist?list=PLX_q1hyeET2TQLU4PzpVoSVYxsUnhzKaW&feature=share -->
+					<input type="hidden" value="KoreaTop100" id="top100url_1">
+					<input type="hidden" value="PLX_q1hyeET2TQLU4PzpVoSVYxsUnhzKaW" id="top100Img_1" >
 				</li>
 				<li >
-
-					<img src="ny/img/PageImg/koreaMVTOP100.png" class="top100Img" id="top100Img_2" onclick="showVideo02()">
 					<img src="NY/img/PageImg/koreaMVTOP100.png" class="top100Img" id="top100Img_2" onclick="showVideo02()">
 					<p>KoreaMVTop100</p>
-					<!-- https://music.youtube.com/playlist?list=PLX_q1hyeET2Tbwcw6_aMvbCgv4HRtsaOh&feature=share -->
+					<input type="hidden" value="PLX_q1hyeET2Tbwcw6_aMvbCgv4HRtsaOh">
 				</li>
 				<li>
-
-					<img src="ny/img/PageImg/globalTOP100.png" class="top100Img" id="top100Img_3" onclick="showVideo03()" >
 					<img src="NY/img/PageImg/globalTOP100.png" class="top100Img" id="top100Img_3" onclick="showVideo03()" >
 					<p>GlobalTop100</p>
-					<!-- https://music.youtube.com/playlist?list=PLX_q1hyeET2TyTOUo2FFLNG8H3xk5f5mP&feature=share -->
+					<input type="hidden" value="PLX_q1hyeET2TyTOUo2FFLNG8H3xk5f5mP">
 				</li>
 				<li>
-					<img src="ny/img/PageImg/globalMVTOP100.png" class="top100Img" id="top100Img_4" onclick="showVideo04()">
 					<img src="NY/img/PageImg/globalMVTOP100.png" class="top100Img" id="top100Img_4" onclick="showVideo04()">
 					<p>GlobalMVTop100</p>
-					<!-- https://music.youtube.com/playlist?list=PLX_q1hyeET2Q1s--AgeUE0vSOxJBQn1L0&feature=share -->
+					<input type="hidden" value="PLX_q1hyeET2Q1s--AgeUE0vSOxJBQn1L0">
 				</li>
 			</ul>
 		</div>
