@@ -17,7 +17,8 @@ private SqlSession sqlSession;
 public UserDetails loadUserByUsername(String userId) throws UsernameNotFoundException {
 	CustomUserDetails principal = new CustomUserDetails();
 	try {
-	principal = sqlSession.selectOne("AuthMapper.getUser",userId);
+	principal = sqlSession.selectOne("AuthMapper.CustomUserDetails",userId);
+	System.out.println("info : " + principal);
 	if(principal == null) { 
 		throw new UsernameNotFoundException("회원이 존재하지 않습니다");
 	}

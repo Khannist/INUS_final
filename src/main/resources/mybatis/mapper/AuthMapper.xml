@@ -7,7 +7,7 @@
 		SELECT COUNT(*) FROM memberManage_tbl WHERE userId = #{userId}
 	</select>
 	
-	<select id="getUser" resultType="com.inus.sh.config.auth.CustomUserDetails">
+	<select id="CustomUserDetails" resultType="com.inus.sh.config.auth.CustomUserDetails">
 		SELECT * FROM memberManage_tbl WHERE userId = #{userId}
 	</select>
 	
