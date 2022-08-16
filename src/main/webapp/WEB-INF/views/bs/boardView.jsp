@@ -105,7 +105,7 @@ function F_closeFReReplace(){
                         <img class="user-thumb" src="https://storage.googleapis.com/mkts/walter.jpg" alt="Walter">
                         <div class="user-details">
                             <strong class="name">${username}</strong>
-                            <span class="location">수원시, 팔달구</span>
+                            <span class="location"></span>
                         </div>
                         <div class="post-menu">
                             <span class="menu">&nbsp;</span>
@@ -115,8 +115,7 @@ function F_closeFReReplace(){
                     <div class="post-footer">
  
                         <div class="likes">
-                            <img src="https://storage.googleapis.com/mkts/walter.jpg" alt="user" class="user-like">
-                            <strong>${username}</strong>의 글을<strong>8</strong>명이 좋아요을 눌렀습니다.
+                            <div class="comment-count"><i class="fa-solid fa-comment"></i>&nbsp;<strong><span id="count">0</span></strong>개의 댓글이 있습니다</div>
                         </div>
 
                         <div class="comments">

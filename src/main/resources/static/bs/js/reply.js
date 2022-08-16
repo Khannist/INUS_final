@@ -47,10 +47,10 @@ function getTest() {
 				var content = list[i].inus_CmContent;
 				var writer = list[i].inus_CmWriter;
 				var commentNum = list[i].inus_commentNum;
-				
-				comment_html += "<div id='commentBox'><span style='display:none;' id='inus_commentNum"+ commentNum +"' >" + commentNum + "</span>";
-				comment_html += "<div><span id='inus_CmWriter'><strong>" + writer + "</strong></span>&nbsp;&nbsp;";
-				comment_html += "<span id='inus_CmContent'>" + content + "</span></div></div>";
+				console.log('#count');
+				comment_html += "<span style='display:none;' id='inus_commentNum"+ commentNum +"' >" + commentNum + "</span>";
+				comment_html += "<div class='boxMargin'><span  id='inus_CmWriter'><strong>" + writer + "</strong></span>&nbsp;&nbsp;";
+				comment_html += "<span id='inus_CmContent'>" + content + "</span>";
 				
 				var con = document.getElementById("inus_CmWriter").value;
 				
@@ -60,7 +60,7 @@ function getTest() {
 					comment_html += '</div>';				
 				}
 				else{
-					comment_html += "</div><hr>";
+					comment_html += "</div>";
 				}
 			}
 			$(".comment_Box").html(comment_html);

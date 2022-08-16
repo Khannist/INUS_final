@@ -1,5 +1,13 @@
 @charset "UTF-8";
-
+.comment_Box{
+   overflow-y: scroll;
+   -ms-overflow-style: none;
+   height:60px;
+   margin-bottom:10px;
+}
+.comment_Box::-webkit-scrollbar{
+	display:none;
+}
 #inus_CmContent.comment-input{
    width:89%;
    height:50px;
@@ -28,23 +36,33 @@ input:focus{
 }
 
 #inus_CmWriter{
-   width:80px;
+   width:110px;
    float:left;
    margin-left:15px;
 }
 .comment-boxx{
    margin-bottom:5px;
 }
+.boxMargin{
+	margin-bottom: 7px;
+}
 #inus_CmContent{
    width:350px;
    float:left;
 }
 input#CommentDeleteBtn {
-    width: 20px;
+    width: 65px;
     cursor: pointer;
     border:none;
     background:#fff;
     float:right;
     margin-bottom: 5px;
     
+}
+
+.commentBox{
+	 display: flex;
+     justify-content: flex-start;
+	 box-sizing: border-box; 
+	 margin-bottom:2px;
 }
