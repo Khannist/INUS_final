@@ -98,6 +98,17 @@ public class AuthController {
 		String encPassword = bCryptPasswordEncoder.encode(signupDto.getPassword());
 		signupDto.setPassword(encPassword);
 		sqlSession.insert("AuthMapper.signup", signupDto);
+		
+		System.out.println("2");
+        System.out.println(signupDto.getUserId());
+        //pVo.setUserid(signupDto.getUserId());
+        System.out.println("3");
+        System.out.println("userimg");
+        //pVo.setInsertuserimg(userimg.getBytes());
+        System.out.println("4");
+        //sqlSession.insert("com.inus.NY.profile.vo.profileImgvo.insert_profileImg", pVo);
+        System.out.println("5");
+		
 		mv.addObject("/login", "회원가입에 성공하였습니다");
 		mv.setViewName("/bs/login");
 		return mv;
