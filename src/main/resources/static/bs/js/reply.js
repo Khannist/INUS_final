@@ -11,10 +11,11 @@ function getTest() {
 	$("#Comment_regist").click(function(){
 		var msg = {
 			inus_boardNum:document.getElementById("inus_boardNum").value, // 게시판 번호를 가져온다. 
-			inus_CmWriter: document.getElementById("inus_userName").value, // 로그인 기능이 없으므로 게시글 작성자 컬럼명을 가져와 사용
-			inus_CmContent:$("#inus_CmContent").val() // 작성하는 내용을 벨류값으로 가져온다.
+			inus_CmWriter: document.getElementById("userId").value, // 로그인 기능이 없으므로 게시글 작성자 컬럼명을 가져와 사용
+			inus_CmContent:document.getElementById("inus_CmContent").innerText // 작성하는 내용을 벨류값으로 가져온다.
 		}
-		
+		console.log(123);
+		console.log(JSON.stringify(msg));
 		commonajax("/comment/InsertComment", msg, "get", function(result){
 			getList(result);
 		});
@@ -28,7 +29,7 @@ function getTest() {
 	function commentList() {
 		var msg = {
 			inus_boardNum:document.getElementById("inus_boardNum").value, // 게시판 번호를 가져온다. 
-			inus_CmWriter: document.getElementById("inus_userName").value, // 로그인 기능이 없으므로 게시글 작성자 컬럼명을 가져와 사용
+			inus_CmWriter: document.getElementById("inus_CmWriter").value, // 로그인 기능이 없으므로 게시글 작성자 컬럼명을 가져와 사용
 			inus_CmContent:$("#inus_CmContent").val() // 작성하는 내용을 벨류값으로 가져온다.
 		}
 		
@@ -50,18 +51,18 @@ function getTest() {
 				var writer = list[i].inus_CmWriter;
 				var commentNum = list[i].inus_commentNum;
 				
-				comment_html += "<div><span style='display:none;' id='inus_commentNum"+ commentNum +"' >" + commentNum + "</span><br/>";
+				comment_html += "<div><span style='display:none;' id='inus_commentNum"+ commentNum +"' >" + commentNum + "</span>";
 				comment_html += "<div><span id='inus_CmWriter'><strong>" + writer + "</strong></span>&nbsp;&nbsp;";
-				comment_html += "<span id='inus_CmContent'>" + content + "</span><br>";
+				comment_html += "<span id='inus_CmContent'>" + content + "</span>";
 				
-				var con = document.getElementById("inus_userName").value;
+				var con = document.getElementById("userId").value;
 				
 				
 				console.log(writer);
 				console.log(con);
 				console.log(writer === con);
 				if(writer === con){
-					comment_html += "<input type=\"button\" id=\"CommentDeleteBtn\" value=\"댓글삭제\" onclick=\"CommentDelete('inus_commentNum"+ commentNum +"')\">";
+					comment_html += "<input type=\"button\" id=\"CommentDeleteBtn\" value=\"x\" onclick=\"CommentDelete('inus_commentNum"+ commentNum +"')\">";
 					comment_html += '</div>';				
 				}
 				else{

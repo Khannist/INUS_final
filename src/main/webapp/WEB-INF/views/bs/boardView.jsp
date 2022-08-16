@@ -24,17 +24,17 @@
 </header>
 <body>
  <sec:authorize access="isAuthenticated()">
-	<sec:authentication property="principal.userId" var="userid" />
-	<sec:authentication property="principal.nickname" var="username" />
-	<input type="hidden" id="userId" name="userId" value="${userid}">
-	<input type="hidden" name="username" id="username" value="${username}">
+   <sec:authentication property="principal.userId" var="userid" />
+   <sec:authentication property="principal.nickname" var="username" />
+   <input type="hidden" id="userId" name="userId" value="${userid}">
+   <input type="hidden" name="username" id="username" value="${username}">
 </sec:authorize>
 <section>
 <div class="MainLbar">
    <article>
    <div class="ServerList">
          <div id="serverCount">   <!-- 필요없어보인다고 지우면 안됌 -->
-         	<jsp:include page="../ch/roomchannel/roomChannel.jsp"></jsp:include>
+            <jsp:include page="../ch/roomchannel/roomChannel.jsp"></jsp:include>
          </div>
    </div>
    <div class="ChatAndFriendList">
@@ -47,34 +47,43 @@
             </div>
             <!-- 채팅방이름 7자 이내 -->
          </div>
-         <div class="ServerReplace">
-            <ul>
-               <li>초대하기</li>
-               <li>채팅방 만들기</li>
-               <li>서버 나가기</li>
-            </ul>
+         <div class="FriendReplace" style="display: none;">   <!-- 나연// 수정부분0813[1/2] -->
+         <div>
+            <p>친구추가</p><br><br>
+                     <input type="text" id="friendAdd" placeholder="친구아이디">
+         </div>
                <div id="inputNameSpace" style="display:none;"><!-- 확인 -->
-                  <input type="text" id="roomName"><br>
+                  
                   <input type="button" value="생성">
                </div>
          </div>
-               <div class="fixProifle">
-                  <div id="fixProfile_1">
-                     <img src="https://source.unsplash.com/random">
-                  </div>
-                  <div id="ProfileFixText">
-                     <p id="fixProfile_2">나요네즈<br>
-                     <span>#6090</span>
-                     </p>
-                  </div>  
-                  <a href="/SET">
-                     <img id="setIcon"src="bs/css/image/setting.png">
-                  </a>
-               </div>   
+               
        </div>
    </div>
    </article>
 </div>
+
+<script type="text/javascript">
+//친구리스트 설정 페이지 나타남
+function F_openFReReplace(){
+    document.querySelector('.FriendReplace').style.display = "block";   //서버 수정 페이지 나타남
+    document.querySelector('#chatIcon_2').style.display = "block";   //닫히는 아이콘 나타남
+    document.querySelector('#chatIcon').style.display = "none";   //열리는 아이콘 없어짐
+
+}
+//친구리스트 설정 페이지 없어짐
+function F_closeFReReplace(){
+    document.querySelector('.FriendReplace').style.display = "none";   //서버 수정 페이지 없어짐
+    document.querySelector('#chatIcon_2').style.display = "none";         //열리는 아이콘 나타남
+    document.querySelector('#chatIcon').style.display = "block";      //닫히는 아이콘 없어짐  
+}
+//친구 삭제 나타남
+function F_closeFReReplace(){
+    document.querySelector('.FriendReplace').style.display = "none";   //서버 수정 페이지 없어짐
+    document.querySelector('#chatIcon_2').style.display = "none";         //열리는 아이콘 나타남
+    document.querySelector('#chatIcon').style.display = "block";      //닫히는 아이콘 없어짐  
+}
+</script>
 <article>
 <!-- feed -->
 <div class="device">   
@@ -87,14 +96,14 @@
             <main class="content" data-aos="flip-left"
      data-aos-duration="1000">
          <c:forEach items="${boardView}" var="boardView">
-         	<input type="hidden" id="inus_boardNum" name="${boardView.inus_boardNum}" value="${boardView.inus_boardNum}">
-         	<input type="hidden" id="inus_userName" name="${boardView.inus_userName}" value="${boardView.inus_userName}">
+            <input type="hidden" id="inus_boardNum" name="${boardView.inus_boardNum}" value="${boardView.inus_boardNum}">
+            <input type="hidden" id="inus_userName" name="${boardView.inus_userName}" value="${boardView.inus_userName}">
             <div class="postpade" >
                 <div class="post">
                     <div class="post-header">
                         <img class="user-thumb" src="https://storage.googleapis.com/mkts/walter.jpg" alt="Walter">
                         <div class="user-details">
-                            <strong class="name">${boardView.inus_userName}</strong>
+                            <strong class="name">${username}</strong>
                             <span class="location">수원시, 팔달구</span>
                         </div>
                         <div class="post-menu">
@@ -103,20 +112,15 @@
                     </div>
                     <img src="https://image.freepik.com/psd-gratuitas/instagram-post-mockup_15879-4.jpg" alt="post" class="post-photo">
                     <div class="post-footer">
-                        <div class="buttons">
-                            <div class="post-btn"><span class="like">&nbsp;</span></div>
-                            <div class="post-btn"><span class="comn">&nbsp;</span></div>
-                            <div class="spacer">&nbsp;</div>
-                            <div class="post-btn"><span class="save">&nbsp;</span></div>
-                        </div>
+ 
                         <div class="likes">
                             <img src="https://storage.googleapis.com/mkts/walter.jpg" alt="user" class="user-like">
-                            <strong>${boardView.inus_userName}</strong>의 글을<strong>8</strong>명이 좋아요을 눌렀습니다.
+                            <strong>${username}</strong>의 글을<strong>8</strong>명이 좋아요을 눌렀습니다.
                         </div>
 
                         <div class="comments">
                             <p>
-                                <strong>${boardView.inus_userName}</strong>&nbsp;&nbsp;${boardView.inus_content}
+                                <strong>${username}</strong>&nbsp;&nbsp;${boardView.inus_content}
                             </p>
                         </div>
                         <span class="time"><fmt:formatDate value="${boardView.inus_Date}" type="date" dateStyle="short"/></span>
@@ -126,7 +130,7 @@
                </div>
            
          </c:forEach>
-			
+         
    </main>
 </div>
          <!-- bottom navigation -->
@@ -171,12 +175,12 @@
         <h4>Jessica</h4>
       </center>
       <div>
-	      <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-	      <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
-	      <a href="#"><i class="fas fa-table"></i><span>Tables</span></a>
-	      <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
-	      <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
-	      <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+         <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+         <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
+         <a href="#"><i class="fas fa-table"></i><span>Tables</span></a>
+         <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
+         <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
+         <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
       </div>
       <div class="snsBtn">
          <main>

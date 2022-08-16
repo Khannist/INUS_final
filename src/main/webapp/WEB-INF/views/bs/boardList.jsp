@@ -107,7 +107,7 @@ function F_closeFReReplace(){
                     <div class="post-header">
                         <img class="user-thumb" src="https://storage.googleapis.com/mkts/walter.jpg" alt="Walter">
                         <div class="user-details">
-                            <strong class="name">${boardList.inus_userName}</strong>
+                            <strong class="name">${username}</strong>
                             <span class="location">수원시, 팔달구</span>
                         </div>
                         <div class="post-menu">
@@ -127,12 +127,12 @@ function F_closeFReReplace(){
                         </div>
                         <div class="likes">
                             <img src="https://storage.googleapis.com/mkts/walter.jpg" alt="user" class="user-like">
-                            <strong>${boardList.inus_userName}</strong>의 글을<strong>8</strong>명이 좋아요을 눌렀습니다.
+                            <strong>${username}</strong>의 글을<strong>8</strong>명이 좋아요을 눌렀습니다.
                         </div>
 
                         <div class="comments">
                             <p>
-                                <strong>${boardList.inus_userName}</strong>&nbsp;&nbsp;${boardList.inus_content}
+                                <strong>${username}</strong>&nbsp;&nbsp;${boardList.inus_content}
                             </p>
                         </div>
                         <span class="time"><fmt:formatDate value="${boardList.inus_Date}" type="date" dateStyle="short"/></span>
@@ -186,11 +186,8 @@ function F_closeFReReplace(){
       </center>
       <div data-aos="flip-left"
      data-aos-duration="3000">
-      <a href="#"><i class="fas fa-desktop"></i><span>${userid}</span></a>
-      <a href="#"><i class="fas fa-cogs"></i><span>${useremail}</span></a>
-      <a href="#"><i class="fas fa-table"></i><span>이</span></a>
-      <a href="#"><i class="fas fa-th"></i><span>거</span></a>
-      <a href="#"><i class="fas fa-info-circle"></i><span>지워주세유</span></a>
+      <a href="#"><i class="fa-solid fa-address-card"></i><span>${userid}</span></a>
+      <a href="#"><i class="fa-solid fa-envelope"></i><span>${useremail}</span></a>
       <a href="/SET"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
       </div>
       <div class="snsBtn" data-aos="fade-down"
