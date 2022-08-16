@@ -30,6 +30,12 @@
 	<sec:authentication property="principal.email" var="useremail" />
 	<input type="hidden" id="userId" name="userId" value="${userid}">
 	<input type="hidden" name="username" id="username" value="${username}">
+	<c:if test="${empty userid}">
+		<a href="/login"></a>
+		<script type="text/javascript">
+			a.click();
+		</script>
+	</c:if>
 </sec:authorize>
 <section>
 <div class="MainLbar">
@@ -45,21 +51,50 @@
       <div class="chatAndFriendheader">
          <div class="ChatList">
             <div class="headerP" >
-               <p id="ChatName">친구리스트</p>
+               <p id="ChatName">추천리스트</p>
                <img class="ChatAndFriend_Icon" id="chatIcon" src="bs/css/image/ChatListIcon.png" onclick="F_openFReReplace()">
                <img class="ChatAndFriend_Icon" id="chatIcon_2" style="display: none;" src="bs/image/ChatListIcon_2.png" onclick="F_closeFReReplace()">
             </div>
             <!-- 채팅방이름 7자 이내 -->
+            
+            
+            <div>
+            	<ul>
+            		<li>
+            			<p>skdus</p>
+            			
+            		</li>
+            		<li>
+            			<p>skdus</p>
+            			
+            		</li>
+            		<li>
+            			<p>skdus</p>
+            			
+            		</li>
+            	</ul>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
          </div>
         <div class="FriendReplace" style="display: none;">	<!-- 나연// 수정부분0813[1/2] -->
 			<div>
 				<p>친구추가</p><br><br>
                		<input type="text" id="friendAdd" placeholder="친구아이디">
 			</div>
-               <div id="inputNameSpace" style="display:none;"><!-- 확인 -->
-                  
-                  <input type="button" value="생성">
-               </div>
+            <div id="inputNameSpace" style="display:none;"><!-- 확인 -->
+               
+               <input type="button" value="생성">
+            </div>
          </div>
                
        </div>
@@ -198,5 +233,16 @@
 <script type="text/javascript">
   AOS.init();
 </script>
+<script type="text/javascript">
+			//서버방 생성 페이지 만들기
+			function channelCreate(){
+				$(".bigDiv").attr("style","display:block");
+			}
+			
+			//서버방 생성 페이지 지우기
+			function NotchannelCreateName(){
+				$(".bigDiv").attr("style","display:none");
+			}
+		</script>
 </body>
 </html>

@@ -4,20 +4,28 @@
 	display: inline-block;
 	
 }
-#channelNameInput {	
-    display: none;
-    z-index: 100;
-    transform: translate(500px, -800px);
-    width: 500px;
-    height: 500px;
-    background: #7e7e7e;
+.bigDiv{
+	display: none; /* 모달창 숨겨 놓기 */
+    position: fixed; 
+    z-index: 1; /* 모달창을 제일 앞에 두기 */
+    /*padding-top: 100px;*/
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto; /* 스크롤 허용 auto */
+    cursor: pointer; /* 마우스 손가락모양 */
+    background-color: rgba(0, 0, 0, 0.8);
 }
-#channelNameInput h2 {
-	text-align: center;
-    color: rgb(18, 18, 18);
-    margin-top: 5px;
-    padding: 24px 24px 0;
-    
+#channelNameInput {	
+    position: relative;
+    /*z-index: 100;
+    transform: translate(500px, -800px);*/
+    width: 500px;
+    height: 300px;
+    background: #36393F;
+    border: 1px;
+    border-radius: 9px;
+    margin:auto;
+    margin-top: 300px;
 }
 #channelNameInput #channelThumbFrame {
     width: 500px;
@@ -29,55 +37,50 @@
 #channelSpace {
 	width: 50px;
 }
-#channelNameInput #channelThumbFrame .channelThumb{
-    width: 150px;
-    height: 150px;
-    border: 4px dashed #101010eb;
-    border-radius: 50%;
-    background: #7e7e7e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-	
-}
-#channelNameInput #channelThumbFrame .chnThumbFile{
-    color: white;
-    cursor: pointer;
-    width: 500px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 28px;
-    font-weight: 800;
-}
+
 #textchannel {
-    font-size: 13px;
+    position: absolute;
+    font-size: 16px;
     font-weight: bold;
+    color: black;
     transform: translate(25px, 80px);
+    top: -7px;
 }
 
 input#channelName {
-	width: 455px;
-    height: 45px;
+	position: absolute;
+    width: 455px;
+    height: 46px;
     transform: translate(20px, 90px);
     font-size: 24px;
+    top:  17px;
+    background-color: #FFFFFF;
+    border: none;
+    border-bottom: 1px solid;
 }
-input#inputChannelName {
-    width: 100px;
-    height: 50px;
+.inputChannelName {
+    width: 138px;
+    height: 41px;
     transform: translate(195px, 100px);
-    background: #E3334F;
+    background: #5C73F2;
     color: white;
     border: none;
     border-radius: 5%;
+    position: absolute;
+    top: 103px;
+    left: -5px;
 }
 #channelSpace li{
 	overflow: hidden;
 }
 
-
+#NotinputChannelName{
+	background-color: #36393F;
+    border: 1px solid #5C73F2;
+    position: absolute;
+    top: 103px;
+    left: 148px;
+}
 
 
 
