@@ -20,7 +20,9 @@
 <link  rel="stylesheet" type="text/css" href="ch/css/channel.css">
 </head>
 <header>
-<img src="bs/css/image/last_logo.jpg" id="logo">
+<a href="/boardList">
+	<img src="bs/css/image/last_logo.jpg" id="logo" >
+</a>
 </header>
 <body>
  <sec:authorize access="isAuthenticated()">

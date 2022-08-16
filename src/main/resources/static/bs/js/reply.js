@@ -122,3 +122,7 @@ function commonajax(url, parameter, type, calbak, contentType){
       }
    });
 }
+
+
+
+

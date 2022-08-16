@@ -18,7 +18,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
 </head>
 <header>
-<img src="bs/css/image/last_logo.jpg" id="logo">
+<a href="/boardList">
+	<img src="bs/css/image/last_logo.jpg" id="logo" >
+</a>
 </header>
 <body>
 
@@ -96,7 +98,11 @@ function F_closeFReReplace(){
        <button class="btn-search"><i class="fas fa-search"></i></button>
        <input type="text" class="input-search" placeholder="Type to Search...">
   </div>
-  <form action="/boardInsert" method="post">
+  <form action="/boardInsert" method="post"  enctype="multipart/form-data">
+  <!-- 나연  -->
+  
+  <input type="hidden" value="${username}" name="inus_userName">
+  <input type="hidden" value="${inus_boardNum}" name="inus_boardNum">
    <div class="scroll">
             <main class="content" data-aos="fade-up"
      data-aos-duration="3000">
@@ -118,12 +124,17 @@ function F_closeFReReplace(){
                             <div class="post-btn"><span class="like">&nbsp;</span></div>
                             <div class="post-btn"><span class="comn">&nbsp;</span></div>
                             <div class="spacer">&nbsp;</div>
+                            
                             <div class="post-btn"><span class="save">&nbsp;</span></div>
                         </div>
+                        <!-- 나연 : 인풋 제목 -->
+                        <input type="text" id="subject" name="inus_subject" placeholder="제목" >
                         <div class="comments">
                             <p>
                                 <textarea id="content" name="inus_content" cols="80" rows="10" style="resize: none;"></textarea>
                             </p>
+                              <!-- 나연  -->
+                              <input type="file" name="boardimg" >
                         </div>
                         <input type="submit" id="submit" value="저장">
 						<input type="button" value="돌아가기" onclick="location='boardList'">
