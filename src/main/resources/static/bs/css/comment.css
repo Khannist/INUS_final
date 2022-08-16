@@ -7,7 +7,17 @@
 }
 .comment-sbox{
    border-top:1px solid #ccc;
-   
+}
+.comment_Box{
+	overflow-y: scroll;
+   -ms-overflow-style: none;
+   height:60px;
+}
+.comment_Box::-webkit-scrollbar{
+  display:none;
+}
+#commentBox{
+	margin-bottom:7px;
 }
 .comment-name{
    height:0px;
@@ -40,7 +50,7 @@ input:focus{
    float:left;
 }
 input#CommentDeleteBtn {
-    width: 20px;
+    width: 65px;
     cursor: pointer;
     border:none;
     background:#fff;

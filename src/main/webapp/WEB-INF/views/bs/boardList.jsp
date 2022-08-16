@@ -92,7 +92,7 @@
                         <img class="user-thumb" src="https://storage.googleapis.com/mkts/walter.jpg" alt="Walter">
                         <div class="user-details">
                             <strong class="name">${username}</strong>
-                            <span class="location">수원시, 팔달구</span>
+                            <span class="location"><i class="fa-solid fa-eye"></i>17</span>
                         </div>
                         <div class="post-menu">
                             <span class="menu">&nbsp;</span>

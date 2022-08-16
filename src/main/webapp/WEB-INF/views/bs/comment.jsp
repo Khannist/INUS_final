@@ -16,10 +16,8 @@
       <p>아직 작성된 글이 없습니다.</p>   
      </div>
 
-   <div class="comment-box">
-                          <div style='display:none;' class="comment-count">댓글 <span id="count">0</span></div>
-
-                                <!-- <span class="c-icon"><i class="fa-solid fa-user"></i>  -->
+   <div class="comment-box">                        
+                          <!-- <span class="c-icon"><i class="fa-solid fa-user"></i>  -->
                           <div class="comment-name">
                            <span style='display:none;' class="anonym">작성자 : 
                               <input type="text" class="form-control" id="inus_CmWriter" placeholder="이름" name ="inus_CmWriter" value='${userid}' readonly  style="width: 100px; border:none; ">
