@@ -92,6 +92,7 @@ function F_closeFReReplace(){
        <button class="btn-search"><i class="fas fa-search"></i></button>
        <input type="text" class="input-search" placeholder="Type to Search...">
   </div>
+  <input type="hidden" id="inus_CmWriter" name="inus_CmWriter" value="${userid}">
    <div class="scroll">
             <main class="content" data-aos="flip-left"
      data-aos-duration="1000">

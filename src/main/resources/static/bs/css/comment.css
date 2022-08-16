@@ -28,8 +28,7 @@ input:focus{
 }
 
 #inus_CmWriter{
-   width:15%;
-   height:30px;
+   width:80px;
    float:left;
    margin-left:15px;
 }
@@ -37,16 +36,15 @@ input:focus{
    margin-bottom:5px;
 }
 #inus_CmContent{
-   width:70%;
+   width:350px;
    float:left;
 }
 input#CommentDeleteBtn {
-    height:30px;
-    width: 10%;
+    width: 20px;
     cursor: pointer;
     border:none;
     background:#fff;
-    clear:both;
+    float:right;
     margin-bottom: 5px;
     
 }
