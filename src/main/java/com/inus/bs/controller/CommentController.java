@@ -57,9 +57,7 @@ public class CommentController {
 	public @ResponseBody void CommentDelete(HttpServletResponse res, CommentVo vo) throws Exception {
 		Gson gson = new Gson();
 		Map<String, Object> data = new HashMap<String, Object>();
-		System.out.println("delete");
-		System.out.println(vo);
-		int a = sqlSession.delete("com.inus.board.CommentMapper.CommentDelete", vo.getInus_commentNum());
+		int a = sqlSession.delete("com.inus.board.CommentMapper.CommentDelete", vo);
 		List<CommentVo> list = sqlSession.selectList("com.inus.board.CommentMapper.getList", vo);
 		if(list.size() > 0) {
 			data.put("list", list);

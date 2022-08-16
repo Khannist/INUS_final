@@ -11,12 +11,14 @@
 
 </head>
 <body>
-	<input type="hidden" id="userId" name="userId" value="${userid}">          
+	<input type="hidden" id="userId" name="userId" value="${userid}">
    <div class="comment_Box" style="border:1px;"> <!-- 댓글이 들어갈 박스 -->
       <p>아직 작성된 글이 없습니다.</p>   
      </div>
 
    <div class="comment-box">
+                          <div style='display:none;' class="comment-count">댓글 <span id="count">0</span></div>
+
                                 <!-- <span class="c-icon"><i class="fa-solid fa-user"></i>  -->
                           <div class="comment-name">
                            <span style='display:none;' class="anonym">작성자 : 
