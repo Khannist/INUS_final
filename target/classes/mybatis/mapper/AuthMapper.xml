@@ -18,7 +18,7 @@
 	
 	<select id="getMember" resultType="com.inus.sh.vo.MemberListVO" parameterType="com.inus.sh.vo.MemberListVO">
 		SELECT
-		*
+		NICKNAME
 		FROM memberManage_tbl
 	</select>
 </mapper>

@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,11 +9,6 @@
 <title>Insert title here</title>
 </head>
 <body>
- <sec:authorize access="isAuthenticated()">
-	<sec:authentication property="principal.userId" var="userid" />
-	<sec:authentication property="principal.nickname" var="username" />
-	<sec:authentication property="principal.email" var="useremail" />
-</sec:authorize>
 	<div class="container">
 		<div class="SetLbar">
 			<div class="UlList">
@@ -40,46 +34,38 @@
 							</ul>
 						</div>
 						<div class="SetList" id="moreSet">
-							<a href="https://www.instagram.com/discord/">
-								<i class="fa-brands fa-instagram" id="icon"></i>
-							</a>
-							<a href="https://www.facebook.com/discord/">
-								<i class="fa-brands fa-facebook-f" id="icon"></i>
-							</a>
-							<a href="https://twitter.com/discord">
-								<i class="fa-brands fa-twitter" id="icon"></i>
-							</a>
+							<i class="fa-brands fa-instagram" id="icon"></i>
+							<i class="fa-brands fa-facebook-f" id="icon"></i>
+							<i class="fa-brands fa-twitter" id="icon"></i>
 							<p>MusicInus<br> from window10</p>
 						</div>
 				</div>
 			</div>
 		</div>
 		<div class="SetMidbar">
-			<a href="/boardList">
-				<img src="NY/img/icon/SetToBack.png" id="Back">
-			</a>
+			<img src="NY/img/icon/SetToBack.png" id="Back">
 			<div class="MidSetList" id="AccountSet">
 				<h3>내 계정</h3>
 				<div class="Scrolldiv">
 					<div class="ScrollDiv2">
 						<div class="profile">
 							<div class="midProfile">
-								<img src="NY/img/icon/profileIcon.png" id="BigProfile">
-								<p id="BiguserName">${userid}</p>
-								<button type="submit" id="userProfileReplace" onclick="F_ProfileSet()">사용자 프로필 편집</button>
+								<img src="https://source.unsplash.com/random" id="BigProfile">
+								<p id="BiguserName">list.name</p>
+								<a href="/userReWrite"><button type="submit" id="userProfileReplace" >사용자 프로필 편집</button></a>
 							</div>
 							<div class="profileInpo">
 										<div class="profileBottom">
 											<div id="profileName">
-												<p id="nameTitle">닉네임</p>
-												<p id="nameReal">${username}</p>
+												<p id="nameTitle">사용자명</p>
+												<p id="nameReal">list.name</p>
 												<button type="submit" class="replaceP" id="nameRe">수정</button>
 											</div>
 											<div class="bottomEmail">
 											</div>
 												<div id="profileEmail">
 													<p id="nameTitle">이메일</p>
-													<p id="nameReal">${useremail}</p>
+													<p id="nameReal">list.email</p>
 													<button type="submit" class="replaceP" id="emailRe">수정</button>
 												</div>
 										</div>
@@ -131,7 +117,7 @@
 							<h3>미리 보기</h3>
 							<div class="smallprofileBackG">
 								<div class="smallprofileMID">
-									<img alt="" src="NY/img/icon/profileIcon.png">
+									<img alt="" src="https://source.unsplash.com/random">
 									<p id="smallname">list.name</p>
 									<p id="smallAly">내 프로필 꾸미기</p>
 								</div>

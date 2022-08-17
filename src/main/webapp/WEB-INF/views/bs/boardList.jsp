@@ -57,9 +57,9 @@
             <!-- 채팅방이름 7자 이내 -->
             <%-- <div>
                 <ul>
-                <c:forEach items="${memberlist}" var="mVo">
+                <c:forEach items="${memberList}" var="memberList">
                     <li>
-                        <p>${}</p>
+                        <p>${memberList.nickname}</p>
                     </li>
                 </c:forEach>
                 </ul>
