@@ -16,9 +16,17 @@ public class BoardVo {
 	private int boardCount; //조회수
 	private byte[]  insertboardImg;
 	private byte[]  boardImg;
+	private String nickname;
 	
 	
 
+	
+	public String getNickname() {
+		return nickname;
+	}
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
 	public byte[] getInsertboardImg() {
 		return insertboardImg;
 	}
@@ -77,8 +85,9 @@ public class BoardVo {
 		return "BoardVo [inus_boardNum=" + inus_boardNum + ", inus_userName=" + inus_userName + ", inus_subject="
 				+ inus_subject + ", inus_content=" + inus_content + ", inus_Date=" + inus_Date + ", boardCount="
 				+ boardCount + ", insertboardImg=" + Arrays.toString(insertboardImg) + ", boardImg="
-				+ Arrays.toString(boardImg) + "]";
+				+ Arrays.toString(boardImg) + ", nickname=" + nickname + "]";
 	}
+	
 	
 	
 	

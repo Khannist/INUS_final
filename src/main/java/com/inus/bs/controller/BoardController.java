@@ -5,6 +5,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.servlet.ServletResponse;
@@ -35,22 +37,17 @@ public class BoardController {
 		return "index";
 	}
 	
+	@RequestMapping("/test")
+	public String test() {
+		return "bs/test";
+	}
+	
 	// 전체목록보기
 	@RequestMapping("/boardList")
 	public ModelAndView boardList(BoardVo bVo) {
 		System.out.println(444);
 		System.out.println(bVo);
 		List<BoardVo> boardList = sqlSession.selectList("com.inus.board.getBoard");
-		System.out.println(442);
-		System.out.println(441);
-		
-		System.out.println(440);
-		System.out.println(boardList);
-		System.out.println(boardList.get(0));
-		
-		System.out.println("abc");
-		System.out.println(boardList.get(0));
-		
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("boardList",boardList);
 		mv.setViewName("bs/boardList");
@@ -100,6 +97,7 @@ public class BoardController {
 	// 게시글 작성화면 보여주기
 	@RequestMapping("/boardWrite")
 	public ModelAndView boardWrite(Model model, BoardVo bVo) {
+		
 		model.addAttribute("inus_userName",bVo.getInus_userName());
 		List<BoardVo> boardList = sqlSession.selectList("com.inus.board.getBoard");
 		model.addAttribute("boardList", boardList);
@@ -134,6 +132,7 @@ public class BoardController {
 					bVo.setInsertboardImg(fileWelcome());
 				}
 				sqlSession.insert("com.inus.board.boardInsert",bVo);
+				System.out.println(bVo.getNickname());
 				System.out.println(bVo);
 				System.out.println("2");
 				ModelAndView mv = new ModelAndView();
@@ -164,19 +163,6 @@ public class BoardController {
 			   request.getRequestDispatcher("/boardList").forward(request, res);
 		}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	// 게시글 수정화면 보여주기

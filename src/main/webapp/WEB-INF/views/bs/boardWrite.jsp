@@ -101,8 +101,9 @@ function F_closeFReReplace(){
   <form action="/boardInsert" method="post"  enctype="multipart/form-data">
   <!-- 나연  -->
   
-  <input type="hidden" value="${username}" name="inus_userName">
+  <input type="hidden" value="${userid}" name="inus_userName">
   <input type="hidden" value="${inus_boardNum}" name="inus_boardNum">
+  <input type="hidden" value="${username}" name="nickname">
    <div class="scroll">
             <main class="content" data-aos="fade-up"
      data-aos-duration="3000">
