@@ -125,17 +125,12 @@ public class BoardController {
 		@PostMapping("/boardInsert")
 		public ModelAndView boardInsertImg(BoardVo bVo,
 			    @RequestParam("boardimg") MultipartFile boardimg) throws IOException {
-				System.out.println("1");
-				System.out.println(bVo);
 				if(boardimg.getBytes().length > 0) {
 					bVo.setInsertboardImg(boardimg.getBytes());					
 				}else {
 					bVo.setInsertboardImg(fileWelcome());
 				}
 				sqlSession.insert("com.inus.board.boardInsert",bVo);
-				System.out.println(bVo.getNickname());
-				System.out.println(bVo);
-				System.out.println("2");
 				ModelAndView mv = new ModelAndView();
 				
 				mv.addObject("inus_boardNum", bVo.getInus_boardNum());

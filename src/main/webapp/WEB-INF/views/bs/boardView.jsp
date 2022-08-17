@@ -106,7 +106,7 @@ function F_closeFReReplace(){
                     <div class="post-header">
                         <img class="user-thumb" src="https://storage.googleapis.com/mkts/walter.jpg" alt="Walter">
                         <div class="user-details">
-                            <strong class="name">${username}</strong>
+                            <strong class="name">${boardView.nickname}</strong>
                             <span class="location"><i class="fa-solid fa-eye"></i>17</span>
                         </div>
                         <div class="post-menu">
@@ -117,15 +117,19 @@ function F_closeFReReplace(){
                     <div class="post-footer">
  
                         <div class="likes">
-                            <div class="comment-count"><i class="fa-solid fa-comment"></i> 댓글이<strong><span id="count">0</span></strong>개가 있습니다.</div>
+                            <div class="comment-count"><i class="fa-solid fa-comment"></i> 댓글이<strong><span id="count">0</span></strong>개가 있습니다.                
+	                        	<span class="update"><button type="button" onclick="location.href='boardUpdate?inus_boardNum=${boardView.inus_boardNum}'" style="border:none; background:#fff;"><i class="fa-solid fa-eraser"></i></button> </span>
+	                        	<span class="delete"><button type="button" onclick="location.href='boardDelete?inus_boardNum=${boardView.inus_boardNum}'" style="border:none; background:#fff;"><i class="fa-solid fa-trash"></i></button> </span>
+                        	</div>
                         </div>
 
                         <div class="comments">
                             <p>
-                                <strong>${username}</strong>&nbsp;&nbsp;${boardView.inus_content}
+                                <strong>${boardView.nickname}</strong>&nbsp;&nbsp;${boardView.inus_content}
                             </p>
                         </div>
                         <span class="time"><fmt:formatDate value="${boardView.inus_Date}" type="date" dateStyle="short"/></span>
+                        
                         <%@ include file="comment.jsp"%>
                     </div>
                 </div>
@@ -177,12 +181,9 @@ function F_closeFReReplace(){
         <h4>Jessica</h4>
       </center>
       <div>
-         <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-         <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
-         <a href="#"><i class="fas fa-table"></i><span>Tables</span></a>
-         <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
-         <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
-         <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+      <a href="#"><i class="fa-solid fa-address-card"></i><span>${userid}</span></a>
+      <a href="#"><i class="fa-solid fa-envelope"></i><span>${useremail}</span></a>
+      <a href="/SET"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
       </div>
       <div class="snsBtn">
          <main>

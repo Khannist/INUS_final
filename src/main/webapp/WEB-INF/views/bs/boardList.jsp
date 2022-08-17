@@ -88,7 +88,6 @@
                         <img class="user-thumb" src="https://storage.googleapis.com/mkts/walter.jpg" alt="Walter">
                         <div class="user-details">
                             <strong class="name">${bVo.nickname}</strong>
-                            <span class="location"><i class="fa-solid fa-eye"></i>17</span>
                         </div>
                         <div class="post-menu">
                             <span class="menu">&nbsp;</span>
@@ -107,12 +106,12 @@
                         </div>
                         <div class="likes">
                             <img src="NY/img/icon/profileIcon.png"  onerror="this.src='NY/img/icon/profileIcon.png'" alt="user" class="user-like">
-                            <strong>${username}</strong>의 글을<strong>8</strong>명이 좋아요을 눌렀습니다.
+                            <i class="fa-solid fa-eye"></i><strong> ${bVo.boardCount}</strong>명이 조회했습니다.
                         </div>
 
                         <div class="comments">
                             <p>
-                                <strong>${username}</strong>&nbsp;&nbsp;${bVo.inus_content}
+                                <strong>${bVo.nickname}</strong>&nbsp;&nbsp;${bVo.inus_content}
                             </p>
                         </div>
                         <span class="time"><fmt:formatDate value="${bVo.inus_Date}" type="date" dateStyle="short"/></span>
