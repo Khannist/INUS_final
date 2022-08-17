@@ -15,4 +15,10 @@
 		INSERT INTO memberManage_tbl (NUM, userId, PASSWORD, EMAIL, NICKNAME)
 		VALUES (USER_NUM_SEQ.NEXTVAL, #{userId}, #{password}, #{email}, #{nickname})
 	</insert>
+	
+	<select id="getMember" resultType="com.inus.sh.vo.MemberListVO" parameterType="com.inus.sh.vo.MemberListVO">
+		SELECT
+		*
+		FROM memberManage_tbl
+	</select>
 </mapper>
