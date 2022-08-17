@@ -90,10 +90,10 @@ function createChatingChannel(res){
 			$("#chating").empty();
 			disconnect();
 		}
-		if($("#TchannelList").val() != null || $("#TchannelList").val() != "") { // 채널 생성시에 선택한 리스트의 채널을 열어주는 코드
+		if($("#TchannelList").val() != null || $("#TchannelList").val() != "") {
 			$("#" + $("#TchannelList").val()).click();
 			$("#TchannelList").val("");
-		}else { // 선택한 채널이 없을경우 첫번째 채널을 선택하게 하는 코드
+		}else {
 			if($("#roomList").children().length == 0) { // 채팅방이 없을경우 제일 처음 채팅채널을 선택하게 하는 코드
 				$("ul#channelSpace").children(":eq(0)").trigger("click");		
 			}else { // 채팅채널을 새로 생성할시 생성한 채널로 이동하는 코드
