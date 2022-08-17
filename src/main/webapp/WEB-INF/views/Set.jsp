@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +10,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+ <sec:authorize access="isAuthenticated()">
+	<sec:authentication property="principal.userId" var="userid" />
+	<sec:authentication property="principal.nickname" var="username" />
+	<sec:authentication property="principal.email" var="useremail" />
+	<input type="hidden" id="userId" name="userId" value="${userid}">
+	<input type="hidden" name="username" id="username" value="${username}">
+</sec:authorize>
 	<div class="container">
 		<div class="SetLbar">
 			<div class="UlList">
@@ -43,29 +51,33 @@
 			</div>
 		</div>
 		<div class="SetMidbar">
-			<img src="NY/img/icon/SetToBack.png" id="Back">
+			<a href="/boardList">
+				<img src="NY/img/icon/SetToBack.png" id="Back">
+			</a>
 			<div class="MidSetList" id="AccountSet">
 				<h3>내 계정</h3>
 				<div class="Scrolldiv">
 					<div class="ScrollDiv2">
 						<div class="profile">
 							<div class="midProfile">
-								<img src="https://source.unsplash.com/random" id="BigProfile">
-								<p id="BiguserName">list.name</p>
-								<a href="/userReWrite"><button type="submit" id="userProfileReplace" >사용자 프로필 편집</button></a>
+								<img src="NY/img/icon/profileIcon.png" id="BigProfile">
+								<p id="BiguserName">${userid}</p>
+								<p onclick="F_ProfileSet()">
+									<button  type="submit" id="userProfileReplace" >사용자 프로필 편집</button>
+								</p>
 							</div>
 							<div class="profileInpo">
 										<div class="profileBottom">
 											<div id="profileName">
-												<p id="nameTitle">사용자명</p>
-												<p id="nameReal">list.name</p>
+												<p id="nameTitle">닉네임</p>
+												<p id="nameReal">${username}</p>
 												<button type="submit" class="replaceP" id="nameRe">수정</button>
 											</div>
 											<div class="bottomEmail">
 											</div>
 												<div id="profileEmail">
 													<p id="nameTitle">이메일</p>
-													<p id="nameReal">list.email</p>
+													<p id="nameReal">${useremail}</p>
 													<button type="submit" class="replaceP" id="emailRe">수정</button>
 												</div>
 										</div>

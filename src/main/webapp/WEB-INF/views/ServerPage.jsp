@@ -73,7 +73,7 @@
 </div>
 <script type="text/javascript" src="/ch/js/event/event.js"></script>
 <script type="text/javascript" src="/NY/js/ServerPage.js"></script>
-<!-- <script type="text/javascript" src="/NY/js/MusicRecommand.js"></script> -->
+<script type="text/javascript" src="/NY/js/MusicRecommand.js"></script>
 <script type="text/javascript" src="/NY/js/Set.js"></script>
 <script type="text/javascript" src="/NY/js/mainTest.js"></script>
 <script type="text/javascript" src="/ch/js/channel/channel.js"></script>
