@@ -4,6 +4,7 @@
 window.onload = function() {
 	getTest();
 	commentList();
+	getChannel();
 }
  
 // 댓글 등록 ajax
