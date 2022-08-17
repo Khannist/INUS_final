@@ -16,9 +16,16 @@ public class BoardVo {
 	private int boardCount; //조회수
 	private byte[]  insertboardImg;
 	private byte[]  boardImg;
+	private String NICKNAME;
 	
 	
 
+	public String getNICKNAME() {
+		return NICKNAME;
+	}
+	public void setNICKNAME(String nICKNAME) {
+		NICKNAME = nICKNAME;
+	}
 	public byte[] getInsertboardImg() {
 		return insertboardImg;
 	}

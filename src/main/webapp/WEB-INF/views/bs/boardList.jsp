@@ -23,7 +23,6 @@
 </a>
 </header>
 <body>
-
  <sec:authorize access="isAuthenticated()">
 	<sec:authentication property="principal.userId" var="userid" />
 	<sec:authentication property="principal.nickname" var="username" />
@@ -72,9 +71,6 @@
    </div>
    </article>
 </div>
-
-
-
 <article>
 <!-- feed -->
 <div class="device">   
@@ -157,7 +153,7 @@
          </div>
       </div>
 </nav>
-         </div>
+      </div>
    </div>
 <!-- right slide bar -->
         <aside class="profile2">
@@ -194,10 +190,8 @@
 
     </aside> 
 </div>
-   </article>
-   
+   </article>  
 </section>
-
 <jsp:include page="../ch/roomchannel/addChannel.jsp"></jsp:include>
 <script type="text/javascript" src="/ch/js/channel/mainchannel.js"></script>
 <script type="text/javascript" src="/NY/js/boardList.js"></script>

@@ -5,6 +5,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.servlet.ServletResponse;
@@ -41,16 +43,17 @@ public class BoardController {
 		System.out.println(444);
 		System.out.println(bVo);
 		List<BoardVo> boardList = sqlSession.selectList("com.inus.board.getBoard");
-		System.out.println(442);
-		System.out.println(441);
-		
-		System.out.println(440);
+		List<BoardVo> nameList = new ArrayList<>();
+		for(int i = 0; i < boardList.size()-1;i++) {
+			BoardVo bbo = sqlSession.selectOne("com.inus.board.joinboard", boardList.get(i));
+			System.out.println(boardList.get(i));
+			System.out.println();
+			System.out.println(bbo);
+			nameList.add(sqlSession.selectOne("com.inus.board.joinboard", boardList.get(i)));
+		}
 		System.out.println(boardList);
-		System.out.println(boardList.get(0));
-		
-		System.out.println("abc");
-		System.out.println(boardList.get(0));
-		
+		System.out.println(nameList);
+		System.out.println(443);
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("boardList",boardList);
 		mv.setViewName("bs/boardList");
@@ -146,19 +149,6 @@ public class BoardController {
 			   request.getRequestDispatcher("/boardList").forward(request, res);
 		}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	// 게시글 수정화면 보여주기

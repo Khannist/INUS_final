@@ -5,12 +5,25 @@
   
 <mapper namespace="com.inus.board"> 
 		<!-- 게시판 출력 -->
-	    <select id="getBoard" resultType="com.inus.bs.vo.BoardVo" parameterType="int">
+	    <select id="getBoard" resultType="com.inus.bs.vo.BoardVo" parameterType="com.inus.bs.vo.BoardVo">
        			SELECT
        			*
        			FROM boardTbl
        			WHERE ROWNUM <![CDATA[<=]]> 10
        			ORDER BY inus_boardNum DESC
+    	</select>
+    	<!-- 조인 -->
+    	<select id="joinboard" resultType="com.inus.bs.vo.BoardVo" parameterType="com.inus.bs.vo.BoardVo">
+    			SELECT 
+    				NICKNAME, userId
+	            FROM 
+	            	memberManage_tbl
+	            WHERE
+	            	USERID = #{inus_userName}             	  
+    	</select>
+    	<!--  -->
+    	<select id="">
+    	
     	</select>
     	<!-- 게시글 조회하기 -->
     	<select id="getView" resultType="com.inus.bs.vo.BoardVo" parameterType="com.inus.bs.vo.BoardVo">
