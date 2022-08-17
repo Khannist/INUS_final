@@ -98,7 +98,7 @@ function F_closeFReReplace(){
        <button class="btn-search"><i class="fas fa-search"></i></button>
        <input type="text" class="input-search" placeholder="Type to Search...">
   </div>
-  <form action="/boardInsert" method="post"  enctype="multipart/form-data">
+  <form action="/boardInsert" method="post" >
   <!-- 나연  -->
   
   <input type="hidden" value="${userid}" name="inus_userName">

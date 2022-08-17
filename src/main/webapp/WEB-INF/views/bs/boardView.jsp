@@ -126,6 +126,7 @@ function F_closeFReReplace(){
                             </p>
                         </div>
                         <span class="time"><fmt:formatDate value="${boardView.inus_Date}" type="date" dateStyle="short"/></span>
+                        <span class="update"><button type="button" onclick="location.href='boardUpdate?inus_boardNum=${boardView.inus_boardNum}'">수정하기</button> </span>
                         <%@ include file="comment.jsp"%>
                     </div>
                 </div>

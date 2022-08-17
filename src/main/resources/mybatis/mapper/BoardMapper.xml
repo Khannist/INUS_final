@@ -51,7 +51,6 @@
     		UPDATE 
     			boardTbl
     		SET
-    			inus_subject = #{inus_subject},
     			inus_content = #{inus_content},
     			inus_Date = sysDate
     		WHERE
