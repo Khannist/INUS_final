@@ -40,5 +40,6 @@ function inviteSend(data) {
 		$("#FUserId").empty();
 		$("#FUserId").attr("placeholder", "초대할 친구 ID");
 		inviteUser();
+		F_closeReplace();
 	}
 }

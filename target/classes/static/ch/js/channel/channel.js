@@ -16,8 +16,7 @@ function getChannel(){ // 채널 리스트 출력
 function createServer(){	// 클릭시 채널 생성페이지
 	var con = document.getElementById("channelNameInput");
     con.style.display = (con.style.display != 'none') ? "none" : "inline-block";
-    console.log($(".bigDiv"));
-	var big = document.getElementsById("bigDiv");
+	var big = document.getElementById("bigDiv");
     big.style.display = (big.style.display != 'none') ? "none" : "inline-block";
 
 }
