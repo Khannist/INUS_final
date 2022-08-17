@@ -34,7 +34,7 @@
    <article>
    <div class="ServerList" data-aos="fade-right"
      data-aos-duration="3000">
-         <div id="serverCount">	<!-- 필요없어보인다고 지우면 안됌 -->
+         <div id="serverCount">
 		<jsp:include page="../ch/roomchannel/roomChannel.jsp"></jsp:include>
 	</div>
    </div>
@@ -48,7 +48,7 @@
                <img class="ChatAndFriend_Icon" id="chatIcon_2" style="display: none;" src="bs/image/ChatListIcon_2.png" onclick="F_closeFReReplace()">
             </div>
             <!-- 채팅방이름 7자 이내 -->
-            <div>
+            <%-- <div>
                 <ul>
                 <c:forEach items="${memberlist}" var="mVo">
                     <li>
@@ -56,7 +56,7 @@
                     </li>
                 </c:forEach>
                 </ul>
-            </div>
+            </div> --%>
             
          </div>
         <div class="FriendReplace" style="display: none;">	<!-- 나연// 수정부분0813[1/2] -->

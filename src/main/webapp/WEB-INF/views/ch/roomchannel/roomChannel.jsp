@@ -13,7 +13,7 @@
 	<ul id="channelSpace">
   
 	</ul>
-	<div class="add" id="addChannel" onclick="channelCreate()">
+	<div class="add" id="addChannel" onclick="createServer()">
 		<p>
 			<a id="addChannel">
 				<img class="serverImg" id="plusServerImg" src="ny/img/icon/plus2.png">
