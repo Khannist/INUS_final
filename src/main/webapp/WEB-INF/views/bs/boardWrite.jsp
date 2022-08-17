@@ -103,6 +103,7 @@ function F_closeFReReplace(){
   
   <input type="hidden" value="${userid}" name="inus_userName">
   <input type="hidden" value="${inus_boardNum}" name="inus_boardNum">
+  <input type="hidden" value="${username}" name="nickname">
    <div class="scroll">
             <main class="content" data-aos="fade-up"
      data-aos-duration="3000">
@@ -111,7 +112,7 @@ function F_closeFReReplace(){
                     <div class="post-header">
                         <img class="user-thumb" src="https://storage.googleapis.com/mkts/walter.jpg" alt="Walter">
                         <div class="user-details">
-                            <strong class="name">${userid}</strong>
+                            <strong class="name">${username}</strong>
                             <span class="location">수원시, 팔달구</span>
                         </div>
                         <div class="post-menu">

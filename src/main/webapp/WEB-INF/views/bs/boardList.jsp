@@ -87,7 +87,7 @@
                     <div class="post-header">
                         <img class="user-thumb" src="https://storage.googleapis.com/mkts/walter.jpg" alt="Walter">
                         <div class="user-details">
-                            <strong class="name">${username}</strong>
+                            <strong class="name">${bVo.nickname}</strong>
                             <span class="location"><i class="fa-solid fa-eye"></i>17</span>
                         </div>
                         <div class="post-menu">
