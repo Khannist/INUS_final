@@ -28,6 +28,13 @@
 	<sec:authentication property="principal.email" var="useremail" />
 	<input type="hidden" id="userId" name="userId" value="${userid}">
 	<input type="hidden" name="username" id="username" value="${username}">
+   <c:if test="${empty userid}">
+      <a href="/login"></a>
+      <script type="text/javascript">
+         a.click();
+      </script>
+   </c:if>
+	
 </sec:authorize>
 <section>
 <div class="MainLbar">
