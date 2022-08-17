@@ -19,10 +19,10 @@
 	<div id="channelNameInput" style="display: none;">
 		<div id="channelThumbFrame">
 		</div>
-		<p id="textchannel">서버 이름</p>
-		<input type="text" name="channelName" id="channelName" placeholder="${username}님의 서버" maxlength="20">
+		<p id="textchannel">채널 이름</p>
+		<input type="text" name="channelName" id="channelName" placeholder="${username}님의 채널" maxlength="20">
 		<!-- channelCreateName함수 지우기 -->
-		<input type="button" name="inputChannelName" class="inputChannelName" id="inputChannelName" value="서버생성" onclick="channelCreateName();">
+		<input type="button" name="inputChannelName" class="inputChannelName" id="inputChannelName" value="채널생성" onclick="channelCreateName();">
 		<input type="button" name="NotinputChannelName" class="inputChannelName" id="NotinputChannelName" value="돌아가기" onclick="createServer();">
 	</div>
 </div>
