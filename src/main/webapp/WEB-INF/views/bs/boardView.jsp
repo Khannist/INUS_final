@@ -112,8 +112,8 @@ function F_closeFReReplace(){
                         <div class="post-menu">
                             <span class="menu">&nbsp;</span>
                         </div>
-                    </div>
-                    <img src="https://image.freepik.com/psd-gratuitas/instagram-post-mockup_15879-4.jpg" alt="post" class="post-photo">
+                    </div> 
+                    <img src="data:image/jpeg;base64,${boardView.boardImg}"  alt="post" class="post-photo">
                     <div class="post-footer">
  
                         <div class="likes">

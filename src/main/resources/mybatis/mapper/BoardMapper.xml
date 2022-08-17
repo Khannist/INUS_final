@@ -8,7 +8,7 @@
 	    <select id="getBoard" resultType="com.inus.bs.vo.BoardVo" parameterType="int">
        			SELECT
        			*
-       			FROM boardTbl
+       			FROM memberManage_tbl,boardTbl
        			WHERE ROWNUM <![CDATA[<=]]> 10
        			ORDER BY inus_boardNum DESC
     	</select>

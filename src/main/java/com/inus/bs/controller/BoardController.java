@@ -71,14 +71,32 @@ public class BoardController {
 	
 	// 게시글 상세보기
 	@RequestMapping("/boardView")
-	public String boardView(Model model , BoardVo bVo) {
-		
-		List<BoardVo> boardView = sqlSession.selectList("com.inus.board.getView",bVo);
-		model.addAttribute("boardView",boardView);
-		sqlSession.update("com.inus.board.boardCount",bVo);
-		return "bs/boardView";
+	public String boardView(Model model ,
+			@RequestParam("inus_boardNum") int inus_boardNum) {
+			System.out.println(inus_boardNum);
+			
+			BoardVo bVo = new BoardVo();
+			bVo.setInus_boardNum(inus_boardNum);
+			System.out.println(bVo);
+			System.out.println(inus_boardNum);
+			List<BoardVo> boardView = sqlSession.selectList("com.inus.board.getView",bVo);
+			System.out.println(boardView);
+			
+			model.addAttribute("boardView",boardView);
+			System.out.println(boardView);
+			
+			sqlSession.update("com.inus.board.boardCount",bVo);
+			return "bs/boardView";
 	}
-	
+	// 게시글 상세보기
+//		@RequestMapping("/boardView")
+//		public String boardView(Model model , BoardVo bVo) {
+//			
+//			List<BoardVo> boardView = sqlSession.selectList("com.inus.board.getView",bVo);
+//			model.addAttribute("boardView",boardView);
+//			sqlSession.update("com.inus.board.boardCount",bVo);
+//			return "bs/boardView";
+//		}
 	// 게시글 작성화면 보여주기
 	@RequestMapping("/boardWrite")
 	public ModelAndView boardWrite(Model model, BoardVo bVo) {
