@@ -8,25 +8,26 @@
 	    <select id="getBoard" resultType="com.inus.bs.vo.BoardVo" parameterType="int">
        			SELECT
        			*
-       			FROM boardTbl
+       			FROM memberManage_tbl,boardTbl
+       			WHERE ROWNUM <![CDATA[<=]]> 10
        			ORDER BY inus_boardNum DESC
     	</select>
     	<!-- 게시글 조회하기 -->
     	<select id="getView" resultType="com.inus.bs.vo.BoardVo" parameterType="com.inus.bs.vo.BoardVo">
-    			SELECT 
-    			inus_boardNum, inus_subject, inus_userName, inus_Date, inus_content 
-    			FROM boardTbl 
+    			SELECT *
+    			FROM  boardTbl
     			WHERE inus_boardNum = #{inus_boardNum}
+    			ORDER BY inus_boardNum ASC
     	</select>
     	<!-- 게시글 등록하기 -->
     	<insert id="boardInsert" parameterType="com.inus.bs.vo.BoardVo">
     		INSERT INTO boardTbl 
     		(
-    			inus_boardNum,inus_userName,inus_subject, inus_content , inus_Date
+    			inus_boardNum,inus_userName,inus_subject, inus_content , inus_Date, boardImg
     		)
     		VALUES
     		( 
-    			boardTbl_seq.NEXTVAL,#{inus_userName},#{inus_subject}, #{inus_content} , sysDate
+    			boardTbl_seq.NEXTVAL,#{inus_userName},#{inus_subject}, #{inus_content} , sysDate, #{insertboardImg}
     		)	
     	</insert>
     	

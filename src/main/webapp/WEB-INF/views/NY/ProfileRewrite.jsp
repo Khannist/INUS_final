@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <script src="https://kit.fontawesome.com/b448239927.js" crossorigin="anonymous"></script>
 <link href="NY/css/Set.css" rel="stylesheet">
+<link href="NY/css/profileReWrite.css" rel="stylesheet">
 <title>Insert title here</title>
 </head>
 <body>

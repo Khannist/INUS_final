@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+#AccountSet h2 {
+	font-weight: normal;
+    margin-left: 45px;
+    margin-top: 24px;
+}
+
+#AccountSet li{
+	margin: 20px auto auto 45px;
+	
+}
+#AccountSet li input {
+    width: 400px;
+    background-color: #2F3136;
+    height: 26px;
+    border: none;
+    padding: 10px;
+}
+
+#submitReWrite{
+	color: white;
+	height: 42px;
+    width: 420px;
+}	
+
+#submitReWrite:hover {
+	color: #B9BBBE;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.inus.NY.profile.vo.ServerImgvo">
+
+	
+	<!-- 서버 이미지 -->
+	
+	<insert id="insert_serverImg"  parameterType="com.inus.NY.profile.vo.ServerImgvo">
+		INSERT INTO ChannelImg_tbl 
+    	VALUES (#{channelCode}, #{insertchannelImg})
+	</insert>
+
+	<select id="Selet_serverImg" resultType="com.inus.NY.profile.vo.ServerImgvo"  parameterType="String">
+		select channelImg
+		from ChannelImg_tbl
+		WHERE channelCode = #{channelCode}
+	</select>
+	
+</mapper>

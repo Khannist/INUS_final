@@ -28,13 +28,20 @@
 	<sec:authentication property="principal.email" var="useremail" />
 	<input type="hidden" id="userId" name="userId" value="${userid}">
 	<input type="hidden" name="username" id="username" value="${username}">
+   <c:if test="${empty userid}">
+      <a href="/login"></a>
+      <script type="text/javascript">
+         a.click();
+      </script>
+   </c:if>
+	
 </sec:authorize>
 <section>
 <div class="MainLbar">
    <article>
    <div class="ServerList" data-aos="fade-right"
      data-aos-duration="3000">
-         <div id="serverCount">	<!-- 필요없어보인다고 지우면 안됌 -->
+         <div id="serverCount">
 		<jsp:include page="../ch/roomchannel/roomChannel.jsp"></jsp:include>
 	</div>
    </div>
@@ -48,6 +55,16 @@
                <img class="ChatAndFriend_Icon" id="chatIcon_2" style="display: none;" src="bs/image/ChatListIcon_2.png" onclick="F_closeFReReplace()">
             </div>
             <!-- 채팅방이름 7자 이내 -->
+            <%-- <div>
+                <ul>
+                <c:forEach items="${memberList}" var="memberList">
+                    <li>
+                        <p>${memberList.nickname}</p>
+                    </li>
+                </c:forEach>
+                </ul>
+            </div> --%>
+            
          </div>
         <div class="FriendReplace" style="display: none;">	<!-- 나연// 수정부분0813[1/2] -->
 			<div>

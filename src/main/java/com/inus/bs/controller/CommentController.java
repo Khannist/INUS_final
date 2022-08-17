@@ -26,11 +26,14 @@ public class CommentController {
 	
 	// 댓글 등록
 	@RequestMapping("/InsertComment")
-	public  ModelAndView InsertComment( CommentVo vo) throws Exception{
+	public  ModelAndView InsertComment(CommentVo vo) throws Exception{
 		ModelAndView mv = new ModelAndView();
 		System.out.println(vo.getInus_boardNum());
+		System.out.println("vo");
+		System.out.println(vo.getInus_commentNum());
 		sqlSession.insert("com.inus.board.CommentMapper.CommentRegist", vo);
 		mv.addObject("inus_boardNum", vo.getInus_boardNum());
+		mv.addObject("inus_commentNum", vo.getInus_commentNum());
 		mv.setViewName("redirect:/comment/CommentList");
 		return mv;
 	}
@@ -38,9 +41,6 @@ public class CommentController {
 	// 댓글 목록
 	@RequestMapping("/CommentList")
 	public @ResponseBody void CommentList(HttpServletResponse res, CommentVo vo) throws Exception {
-		System.out.println("1 = " + vo.getInus_CmContent());
-		System.out.println("2 = " + vo.getInus_boardNum());
-		System.out.println("3 = " + vo.getInus_CmWriter());
 		Gson gson = new Gson();
 		Map<String, Object> data = new HashMap<String, Object>();
 		List<CommentVo> list = sqlSession.selectList("com.inus.board.CommentMapper.getList", vo);
@@ -48,7 +48,6 @@ public class CommentController {
 			data.put("list", list);
 		}
 		
-		System.out.println("data = " + data);
 		res.setCharacterEncoding("UTF-8");
 		res.getWriter().print(gson.toJson(data));
 	}
@@ -58,16 +57,11 @@ public class CommentController {
 	public @ResponseBody void CommentDelete(HttpServletResponse res, CommentVo vo) throws Exception {
 		Gson gson = new Gson();
 		Map<String, Object> data = new HashMap<String, Object>();
-		System.out.println("vo = " + vo);
 		int a = sqlSession.delete("com.inus.board.CommentMapper.CommentDelete", vo);
-		System.out.println("여부 = " + a);
 		List<CommentVo> list = sqlSession.selectList("com.inus.board.CommentMapper.getList", vo);
 		if(list.size() > 0) {
 			data.put("list", list);
 		}
-		System.out.println("list : "+list);
-		System.out.println("CommentDelete 컨트롤러 출력완료");
-		System.out.println("data : "+data);
 		res.setCharacterEncoding("UTF-8");
 		res.getWriter().print(gson.toJson(data));
 	}

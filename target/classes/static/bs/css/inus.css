@@ -280,7 +280,7 @@ ul{
    margin:0 auto;
 }
 .instagram {
-   margin-left:250px;
+   margin-left:280px;
     width: 600px;
     height: 900px;
     display: flex;
@@ -448,6 +448,10 @@ ul{
 .instagram .content .post .post-photo {
     width: 100%;
     height:500px;
+}
+.instagram .content .post .post-photo1 {
+    width: 100%;
+    height:100%;
 }
 .instagram .content .post .post-footer .buttons {
     width: 100%;

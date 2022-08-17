@@ -52,7 +52,7 @@
 							<div class="midProfile">
 								<img src="https://source.unsplash.com/random" id="BigProfile">
 								<p id="BiguserName">list.name</p>
-								<button type="submit" id="userProfileReplace" onclick="F_ProfileSet()">사용자 프로필 편집</button>
+								<a href="/userReWrite"><button type="submit" id="userProfileReplace" >사용자 프로필 편집</button></a>
 							</div>
 							<div class="profileInpo">
 										<div class="profileBottom">

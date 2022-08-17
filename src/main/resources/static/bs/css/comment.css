@@ -1,25 +1,60 @@
 @charset "UTF-8";
 
-.comment-input{
-	color:#787878;
-	width:90%;
-	height:50px;
-	font-size:15px;
-	font-weight:20px;
-	float:left;
+#inus_CmContent.comment-input{
+   width:89%;
+   height:50px;
+   float:left;
 }
-
+.comment-sbox{
+   border-top:1px solid #ccc;
+}
+.comment_Box{
+	overflow-y: scroll;
+   -ms-overflow-style: none;
+   height:60px;
+}
+.comment_Box::-webkit-scrollbar{
+  display:none;
+}
+#commentBox{
+	margin-bottom:7px;
+}
+.comment-name{
+   height:0px;
+}
 .regBtn{
-	width:10%;
-	float:left
+   color:#59acff;;
+}
+input#Comment_regist {
+    height: 50px;
+    width: 10%;
+    cursor: pointer;
+    border:none;
+    background:#fff;
 }
 
-#line {
-	border-top:1px solid #ccc;
-	margin-bottom:5px;
-	width:100%;	
+input:focus{
+   outline:none;
 }
 
-.comment_Box {
-	border-bottom:1px solid #ccc;
+#inus_CmWriter{
+   width:80px;
+   float:left;
+   margin-left:15px;
+}
+.comment-boxx{
+   margin-bottom:5px;
+}
+#inus_CmContent{
+   width:350px;
+   float:left;
+}
+input#CommentDeleteBtn {
+    width: 65px;
+    cursor: pointer;
+    border:none;
+    background:#fff;
+    float:right;
+    margin-bottom: 5px;
+    
 }
