@@ -14,13 +14,5 @@ import com.inus.sh.vo.MemberListVO;
 @Controller
 public class FriendsController {
 	
-	@Autowired
-	private SqlSession sqlSession;
-
-	@GetMapping("/boardList")
-	public String memberList(Model model, MemberListVO mlVo) {
-		List<MemberListVO> memberList = sqlSession.selectList("AuthMapper.getMember");
-		model.addAttribute("memberList", memberList);
-		return "bs/boardList";
-	}
+	
 }

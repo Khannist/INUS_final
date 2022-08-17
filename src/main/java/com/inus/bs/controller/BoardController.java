@@ -48,6 +48,7 @@ public class BoardController {
 		System.out.println(444);
 		System.out.println(bVo);
 		List<BoardVo> boardList = sqlSession.selectList("com.inus.board.getBoard");
+		System.out.println("boardList = " + boardList);
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("boardList",boardList);
 		mv.setViewName("bs/boardList");
