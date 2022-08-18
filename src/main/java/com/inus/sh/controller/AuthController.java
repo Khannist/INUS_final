@@ -52,11 +52,12 @@ public class AuthController {
 		return mv;
 	}
 	
-	//로그인 실패시 failed로 이동
+	//로그인 실패시 에러메시지를 보여주기 위함
 	@GetMapping("/failed")
 	public ModelAndView failedSignin(Model model) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("/bs/login");
+		mv.addObject("/login", "아이디 또는 비밀번호를 잘못 입력하셨습니다.");
 		return mv;
 	}
 	
@@ -93,17 +94,16 @@ public class AuthController {
 		//유효성 검사 성공시 회원가입 서비스 로직 실행
 		signup(signupDto);
 		
-		// 회원가입이 성공하면 로그인 페이지 이동
+		//이때 회원가입이 성공하셨다는 메시지 출력 후 로그인 페이지 이동
 		String encPassword = bCryptPasswordEncoder.encode(signupDto.getPassword());
 		signupDto.setPassword(encPassword);
 		sqlSession.insert("AuthMapper.signup", signupDto);
-		
+		mv.addObject("/login", "회원가입에 성공하였습니다");
 		mv.setViewName("/bs/login");
 		return mv;
 		
 	}
 	
-	// 유효성 검사를 위한 메서드
 	public Map<String, String> validHandling(Errors errors){
 		Map<String, String> validResult = new HashMap<>();
 		for(FieldError error : errors.getFieldErrors()) {
@@ -112,39 +112,39 @@ public class AuthController {
 		return validResult;
 	}
 	
-	// 아이디 중복체크를 위한 메서드
-	public int usernameChk(String userId) { 
+	public int
+		usernameChk(String userId) {
+	    System.out.println("서비스 userid = " + userId); 
 	    int result = sqlSession.selectOne("AuthMapper.usernameChk", userId);
 	    return result; 
+	    
 	}
 	
 	 //회원정보 수정 처리
 	 
-		/*
-		 * @PostMapping("/myInfo") public String myInfo (
-		 * 
-		 * @RequestParam("password") String passwordout,
-		 * 
-		 * @RequestParam("nickname") String nickname,
-		 * 
-		 * @RequestParam("email") String email, Model model) throws Exception {
-		 * 
-		 * String password = bCryptPasswordEncoder.encode(passwordout);
-		 * 
-		 * CustomUserDetails customUserDetails = new CustomUserDetails();
-		 * 
-		 * customUserDetails.setPassword(password);
-		 * customUserDetails.setNickname(nickname); customUserDetails.setEmail(email);
-		 * 
-		 * userService.modifyInfo(customUserDetails);
-		 * 
-		 * model.addAttribute("myInfo","info"); model.addAttribute("customUserDetails",
-		 * customUserDetails);
-		 * 
-		 * 
-		 * return "sh/jsp/myInfo";
-		 * 
-		 * }
-		 */
+	  @PostMapping("/myInfo") 
+	  public String myInfo (
+		  @RequestParam("password") String passwordout,
+		  @RequestParam("nickname") String nickname,
+		  @RequestParam("email") String email, 
+		  Model model) throws Exception {
+		  
+		  String password = bCryptPasswordEncoder.encode(passwordout);
+		  
+		  CustomUserDetails customUserDetails = new CustomUserDetails();
+		  
+		  customUserDetails.setPassword(password);
+		  customUserDetails.setNickname(nickname); 
+		  customUserDetails.setEmail(email);
+		  
+		  userService.modifyInfo(customUserDetails);
+		  
+		  model.addAttribute("myInfo","info");
+		  model.addAttribute("customUserDetails", customUserDetails);
+	  
+	  
+	  return "sh/jsp/myInfo"; 
+	  
+	  }
 	 
 }

@@ -4,8 +4,6 @@
 window.onload = function() {
 	getTest();
 	commentList();
-	getChannel();
-	flistLoad();
 }
  
 // 댓글 등록 ajax

@@ -16,9 +16,6 @@ function getChannel(){ // 채널 리스트 출력
 function createServer(){	// 클릭시 채널 생성페이지
 	var con = document.getElementById("channelNameInput");
     con.style.display = (con.style.display != 'none') ? "none" : "inline-block";
-	var big = document.getElementById("bigDiv");
-    big.style.display = (big.style.display != 'none') ? "none" : "inline-block";
-
 }
 		
 function channelCreateName(){ // 채널 생성
@@ -33,9 +30,8 @@ function channelCreateName(){ // 채널 생성
 		commonAjax('/createChannel', msg, 'post', function(result){
 			createChatingChannel(result);
 		});
-		document.getElementById("channelNameInput").style.display = "none";
-		
-    	document.getElementById("bigDiv").style.display = "none";
+		var con = document.getElementById("channelNameInput");
+		con.style.display = "none";
 		$("input#channelName").val("");
 		$("#channelName").attr("placeholder", "채널 이름 입력");
 	}
@@ -53,6 +49,7 @@ function goChannel(code, name, id, chanName){
 		userId : id,
 		roomNumber : "1"
 	}
+	
 	$("#channelCode").val(code);
 	
 	commonAjax('/moveRoom', msg, 'post', function(result){
@@ -65,11 +62,11 @@ function goChannel(code, name, id, chanName){
 }
 
 function createChatingChannel(res){
-	if(res != null){
+	if(res != null){ // 채팅방이 있을시
 		var tag = "";
-		if(res.list) {
-			res.list.forEach(function(d){
-				$("#channelCode").val(d.channelCode);
+		if(res.list) { // res에 list 리스트가 있을시
+			res.list.forEach(function(d){ // 길이만큼 반복
+				$("#channelCode").val(d.channelCode); // d번째 channelCode값 입력
 				var cn = d.channelName;
 				tag += "<li onclick='goChannel(\""+d.channelCode+"\", \""+cn+"\",\""+d.userId+"\",\""+d.channelList+"\")' "+
 				" id='"+ d.channelList +"' class='channel'>"+

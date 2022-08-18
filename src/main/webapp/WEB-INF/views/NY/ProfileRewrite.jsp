@@ -1,20 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <script src="https://kit.fontawesome.com/b448239927.js" crossorigin="anonymous"></script>
 <link href="NY/css/Set.css" rel="stylesheet">
+<link href="NY/css/profileReWrite.css" rel="stylesheet">
 <title>Insert title here</title>
 </head>
 <body>
- <sec:authorize access="isAuthenticated()">
-	<sec:authentication property="principal.userId" var="userid" />
-	<sec:authentication property="principal.nickname" var="username" />
-	<sec:authentication property="principal.email" var="useremail" />
-</sec:authorize>
 	<div class="container">
 		<div class="SetLbar">
 			<div class="UlList">
@@ -40,9 +35,9 @@
 							</ul>
 						</div>
 						<div class="SetList" id="moreSet">
-							<i class="fa-brands fa-instagram" id="icon"></i>
-							<i class="fa-brands fa-facebook-f" id="icon"></i>
-							<i class="fa-brands fa-twitter" id="icon"></i>
+							<a href="https://instagram.com/disco_rd1111?igshid=YmMyMTA2M2Y="><i class="fa-brands fa-instagram" id="icon"></i></a>
+							<a href="https://ko-kr.facebook.com/discord/"><i class="fa-brands fa-facebook-f" id="icon"></i></a>
+							<a href="https://twitter.com/search?q=%23%EB%94%94%EC%BD%94"><i class="fa-brands fa-twitter" id="icon"></i></a>
 							<p>MusicInus<br> from window10</p>
 						</div>
 				</div>
@@ -54,51 +49,36 @@
 			</a>
 			<div class="MidSetList" id="AccountSet">
 				<h3>내 계정</h3>
-				<div class="Scrolldiv">
-					<div class="ScrollDiv2">
-						<div class="profile">
-							<div class="midProfile">
-								<img src="NY/img/icon/profileIcon.png" id="BigProfile">
-								<p id="BiguserName">${userid}</p>
-								<button type="submit" id="userProfileReplace" onclick="F_ProfileSet()">사용자 프로필 편집</button>
-							</div>
-							<div class="profileInpo">
-										<div class="profileBottom">
-											<div id="profileName">
-												<p id="nameTitle">닉네임</p>
-												<p id="nameReal">${username}</p>
-												<button type="submit" class="replaceP" id="nameRe">수정</button>
-											</div>
-											<div class="bottomEmail">
-											</div>
-												<div id="profileEmail">
-													<p id="nameTitle">이메일</p>
-													<p id="nameReal">${useremail}</p>
-													<button type="submit" class="replaceP" id="emailRe">수정</button>
-												</div>
-										</div>
-								<div class="ProfileSet02">
-									<div>
-										<h2>비밀번호와 인증</h2>
-										<button id="btn01">비밀번호 변경하기</button>
-										<p id="PWtext">2단계 인증<br>
-										MusicInus 계정을 보호하기 위해 2단계 인증을 활성화 할 수 있어요. 이 기능을 사용하면, 로그인 시 핸드폰에 있는 인증코드를 입력해야 MusicInus 이용이 가능해요. 
-										</p>
-										<button id="btn02">2단계 인증 활성화하기</button>
-									</div>
-								</div>
-								<div class="ProfileSet03">
-									<h3>계정 제거</h3>
-									<div id="ProfileSet03Text">
-										<p>계정을 비활성하면 언제든 복구할 수 있어요.</p>
-										<button id="Fbtn03">계정 비활성화</button>
-										<button id="Sbtn03">계정 삭제하기</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				
+				<form action="">
+					<h2>Prifile ReWrite</h2>
+					<img src="">
+					<ul>
+						<li>
+							<input type="file">
+						</li>
+						<li>
+							<input type="text" placeholder="${list.id}" readonly="readonly">
+						</li>
+						<li>
+							<input type="password" placeholder="${list.password}">
+						</li>
+						<li>
+							<input type="text" placeholder="${list.nickname}">
+						</li>
+						<li>
+							<input type="text" placeholder="${list.email}">
+						</li>
+						<li>
+							<a href="#">
+								<input type="submit" placeholder="INSERT">
+							</a>
+						</li>
+					</ul>
+				</form>
+				
+		
+			</div>
 		</div>
 			<div class="MidSetList" id="ProfileSet">
 				<h3>프로필</h3>
@@ -125,7 +105,7 @@
 							<h3>미리 보기</h3>
 							<div class="smallprofileBackG">
 								<div class="smallprofileMID">
-									<img alt="" src="NY/img/icon/profileIcon.png">
+									<img alt="" src="https://source.unsplash.com/random">
 									<p id="smallname">list.name</p>
 									<p id="smallAly">내 프로필 꾸미기</p>
 								</div>
@@ -233,7 +213,7 @@
 						<p>정말로 로그아웃 하시겠어요?</p>
 						<div id="CheckLogout">
 							<button class="logOutClass" id="LogOutFake" onclick="LogOutFakeBtn()">취소</button>
-							<a href="/doLogout"><button class="logOutClass" id="LogOutReal">로그아웃</button></a>
+							<button class="logOutClass" id="LogOutReal">로그아웃</button>
 						</div>
 					</div>	
 		</div>

@@ -55,8 +55,7 @@
       <span></span>
       <span></span>
       <span></span>
-      <input type="reset" id="b" style="display: none;">
-      <label for="b">RESET</label>
+      Reset
     </a>
   </form>
 </div>

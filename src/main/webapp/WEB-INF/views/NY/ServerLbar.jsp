@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,13 +8,7 @@
 <title>왼쪽 바</title>
 </head>
 <body>
- <sec:authorize access="isAuthenticated()">
-	<sec:authentication property="principal.userId" var="userid" />
-	<sec:authentication property="principal.nickname" var="username" />
-	<sec:authentication property="principal.email" var="useremail" />
-	<input type="hidden" id="userId" name="userId" value="${userid}">
-	<input type="hidden" name="username" id="username" value="${username}">
-</sec:authorize>
+
 	<div class="ServerList">
 		<div id="serverCount">	<!-- 필요없어보인다고 지우면 안됌 -->
 			<jsp:include page="../ch/roomchannel/roomChannel.jsp"></jsp:include>
@@ -56,10 +49,11 @@
 		
 				<div class="fixProifle">
 					<p id="fixProfile_1">
-						<img src="NY/img/icon/profileIcon.png">
+						<img src="https://source.unsplash.com/random">
 					</p>
 					<div id="ProfileFixText">
-						<p id="fixProfile_2">${username}<br>
+						<p id="fixProfile_2">나요네즈<br>
+								<span>#6090</span>
 						</p>
 					</div>
 					

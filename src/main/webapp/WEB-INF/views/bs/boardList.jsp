@@ -55,11 +55,6 @@
                <img class="ChatAndFriend_Icon" id="chatIcon_2" style="display: none;" src="bs/image/ChatListIcon_2.png" onclick="F_closeFReReplace()">
             </div>
             <!-- 채팅방이름 7자 이내 -->
-            <div>
-                <ul id="friend" class="friend">
-	                
-                </ul>
-            </div> 
          </div>
         <div class="FriendReplace" style="display: none;">	<!-- 나연// 수정부분0813[1/2] -->
 			<div>
@@ -111,7 +106,7 @@
                         </div>
                         <div class="likes">
                             <img src="NY/img/icon/profileIcon.png"  onerror="this.src='NY/img/icon/profileIcon.png'" alt="user" class="user-like">
-                            <i class="fa-solid fa-eye"></i><strong> ${bVo.boardCount}</strong>명이 조회했습니다.
+                            <span class="location"><i class="fa-solid fa-eye"></i> ${bVo.boardCount}</span>
                         </div>
 
                         <div class="comments">
@@ -198,7 +193,6 @@
 </section>
 <jsp:include page="../ch/roomchannel/addChannel.jsp"></jsp:include>
 <script type="text/javascript" src="/ch/js/channel/mainchannel.js"></script>
-<script type="text/javascript" src="/sh/js/flist.js"></script>
 <script type="text/javascript" src="/NY/js/boardList.js"></script>
 <script type="text/javascript">
   AOS.init();

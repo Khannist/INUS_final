@@ -28,6 +28,7 @@
  <sec:authorize access="isAuthenticated()">
    <sec:authentication property="principal.userId" var="userid" />
    <sec:authentication property="principal.nickname" var="username" />
+   <sec:authentication property="principal.email" var="useremail" />
    <input type="hidden" id="userId" name="userId" value="${userid}">
    <input type="hidden" name="username" id="username" value="${username}">
 </sec:authorize>
@@ -98,7 +99,7 @@ function F_closeFReReplace(){
    <div class="scroll">
             <main class="content" data-aos="flip-left"
      data-aos-duration="1000">
-     		<form action="updateBoard?inus_boardNum=${boardVo.inus_boardNum}" method="post" enctype="multipart/form-data">
+     		<form action="updateBoard?inus_boardNum=${boardVo.inus_boardNum}" method="post">
          <c:forEach items="${boardUpdate}" var="boardUpdate">
             <input type="hidden" id="inus_boardNum" name="${boardView.inus_boardNum}" value="${boardView.inus_boardNum}">
             <input type="hidden" id="inus_userName" name="${boardView.inus_userName}" value="${boardView.inus_userName}">
@@ -179,12 +180,9 @@ function F_closeFReReplace(){
         <h4>Jessica</h4>
       </center>
       <div>
-         <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-         <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
-         <a href="#"><i class="fas fa-table"></i><span>Tables</span></a>
-         <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
-         <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
-         <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+      <a href="#"><i class="fa-solid fa-address-card"></i><span>${userid}</span></a>
+      <a href="#"><i class="fa-solid fa-envelope"></i><span>${useremail}</span></a>
+      <a href="/SET"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
       </div>
       <div class="snsBtn">
          <main>

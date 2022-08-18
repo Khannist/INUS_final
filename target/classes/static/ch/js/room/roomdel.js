@@ -12,7 +12,6 @@
 	}else {
 		commonAjax('/delRoom', msg , 'post', function(result){
 		createChatingRoom(result);
-		$("#roomList").children(":eq(0)").children(":eq(0)").trigger("click");
 	});
 	}
 }

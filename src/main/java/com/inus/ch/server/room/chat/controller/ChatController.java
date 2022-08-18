@@ -66,7 +66,6 @@ public class ChatController {
 			mav.addObject("room", room);
 			
 		}
-		
 		mav.setViewName("forward:/getRoom");
 		return mav;
 		

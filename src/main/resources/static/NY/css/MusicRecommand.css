@@ -1,13 +1,4 @@
-@charset "UTF-8";
-
-.PlayListIframe iframe{
-	display: none;
-	margin: 60px 20px 3px 20px;
-}
-
-#KoreaTop100Iframe{
-	display: block;
-}
+@charset "EUC-KR";
 p{
 	text-align: left;
 }
@@ -25,7 +16,7 @@ p{
 	}
 	
 	
-	/* ìŒì•… ì¶”ì²œë¦¬ìŠ¤íŠ¸ í° div */
+	/* À½¾Ç ÃßÃµ¸®½ºÆ® Å« div */
 	.RecommandPlayList{
 		margin-left: 15px;
 	}
@@ -37,7 +28,7 @@ p{
 	.RecommandPlayList img{
 		width: 120px;
 	}
-	.Command{	/*ê° í…Œë§ˆ ìœ„ì— í…ìŠ¤íŠ¸*/
+	.Command{	/*°¢ Å×¸¶ À§¿¡ ÅØ½ºÆ®*/
 		color: white;
 		font-size: 25px;
 		font-weight: bold;
@@ -52,7 +43,7 @@ p{
 	}
 
 
-	/* [ìŒì•… ì¶”ì²œë¦¬ìŠ¤íŠ¸] top100 ì¶”ì²œë¦¬ìŠ¤íŠ¸*/
+	/* [À½¾Ç ÃßÃµ¸®½ºÆ®] top100 ÃßÃµ¸®½ºÆ®*/
 	.top100List{
 		float:left;
 	}
@@ -68,7 +59,7 @@ p{
 	
 	
 	
-	/* [ìŒì•… ì¶”ì²œë¦¬ìŠ¤íŠ¸] í‚¤ì›Œë“œ ì¶”ì²œë¦¬ìŠ¤íŠ¸*/
+	/* [À½¾Ç ÃßÃµ¸®½ºÆ®] Å°¿öµå ÃßÃµ¸®½ºÆ®*/
 	.keyword {
 	    background-color: whitesmoke;
 	    width: 50px;
