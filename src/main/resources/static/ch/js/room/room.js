@@ -18,6 +18,7 @@ function getRoom(res){
 	commonAjax('/getRoom', msg , 'post', function(result){
 		createChatingRoom(result);
 	});
+	
 }
 
 function createRoom(){
@@ -69,6 +70,7 @@ function goRoom(code, id, room){
 		getChat(result);
 	});
 	
+	
 	$("#roomList li").css({
 		"background":"none",
 		"height" : "45px"
@@ -92,8 +94,6 @@ function getChat(res) {
 		channelCode : res.channelCode,
 		roomCode : res.roomCode
 			};
-			
-	console.log(JSON.stringify(msg));
 	commonAjax('/getChat', msg , 'post', function(result){
 		createChat(result);
 	});
@@ -151,7 +151,7 @@ function createChatingRoom(res){
 			if(res.list.length >= 1) {
 				$("#roomCode").val(res.list[0].roomCode);
 				$("#ChatName").innerText = (res.list[0].channelName);
-				res.list.forEach(function(d, idx){
+				res.list.forEach(function(d){
 					var rn = d.roomName;
 					tag += "<li id=" + d.roomCode + ">"+
 								"<span onclick='goRoom(\""+d.channelCode+"\",\""+d.userId+"\",\""+d.roomCode+"\")'" + 
@@ -193,6 +193,7 @@ function checkRoom(res) { // 채널을 생성한후 main 채팅방을 만드는 
 			success: function (res) {
 				res = JSON.parse(res);
 				if(res.msg == "yes") {
+					$('input#roomName').val("main");
 					createRoomName();
 				}
 				
