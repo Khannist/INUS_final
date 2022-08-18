@@ -59,7 +59,9 @@
                   <input type="button" value="생성">
                </div>
          </div>
-               
+         <div>
+         	<ul id="friend" class="friend"></ul>
+         </div> 
        </div>
    </div>
    </article>
@@ -213,6 +215,7 @@ function F_closeFReReplace(){
 </script>
 <jsp:include page="../ch/roomchannel/addChannel.jsp"></jsp:include>
 <script type="text/javascript" src="/ch/js/channel/mainchannel.js"></script>
+<script type="text/javascript" src="/sh/js/flist.js"></script>
 <script type="text/javascript" src="bs/js/reply.js"></script>
 </body>
 </html>

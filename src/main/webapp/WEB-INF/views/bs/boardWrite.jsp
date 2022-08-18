@@ -48,6 +48,11 @@
                <img class="ChatAndFriend_Icon" id="chatIcon_2" style="display: none;" src="bs/image/ChatListIcon_2.png" onclick="F_closeFReReplace()">
             </div>
             <!-- 채팅방이름 7자 이내 -->
+            <div>
+                <ul id="friend" class="friend">
+	                
+                </ul>
+            </div> 
          </div>
         <div class="FriendReplace" style="display: none;">	<!-- 나연// 수정부분0813[1/2] -->
 			<div>
@@ -218,6 +223,7 @@ function F_closeFReReplace(){
 <jsp:include page="../ch/roomchannel/addChannel.jsp"></jsp:include>
 <script type="text/javascript" src="/bs/js/change.js"></script>
 <script type="text/javascript" src="/ch/js/channel/mainchannel.js"></script>
+<script type="text/javascript" src="/sh/js/flist.js"></script>
 <script type="text/javascript">
   AOS.init();
 </script>

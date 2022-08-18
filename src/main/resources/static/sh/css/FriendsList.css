@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+.friend ul li {
+	background-color: #2F3136;
+    float: left;
+    width: 680px;
+    max-height: 100vh;
+    height: 100vh;
+    color: #B9BBBE;
+    position: relative;
+}
+        
+        
