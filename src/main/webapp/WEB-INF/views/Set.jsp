@@ -42,9 +42,15 @@
 							</ul>
 						</div>
 						<div class="SetList" id="moreSet">
+						<a href="https://www.instagram.com/discord/">
 							<i class="fa-brands fa-instagram" id="icon"></i>
+						</a>
+						<a href="https://www.facebook.com/discord/">
 							<i class="fa-brands fa-facebook-f" id="icon"></i>
+						</a>
+						<a href="https://twitter.com/discord">
 							<i class="fa-brands fa-twitter" id="icon"></i>
+						</a>
 							<p>MusicInus<br> from window10</p>
 						</div>
 				</div>

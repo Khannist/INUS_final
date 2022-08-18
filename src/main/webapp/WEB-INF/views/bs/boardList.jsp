@@ -50,7 +50,7 @@
       <div class="chatAndFriendheader">
          <div class="ChatList">
             <div class="headerP" >
-               <p id="ChatName">친구리스트</p>
+               <p id="ChatName">Recommand Friend</p>
                <img class="ChatAndFriend_Icon" id="chatIcon" src="bs/css/image/ChatListIcon.png" onclick="F_openFReReplace()">
                <img class="ChatAndFriend_Icon" id="chatIcon_2" style="display: none;" src="bs/image/ChatListIcon_2.png" onclick="F_closeFReReplace()">
             </div>
@@ -180,10 +180,16 @@
           <!-- sns 아이콘 -->
           <!-- Media Button Element -->
           <section class="btn-section">
-              <button class="btn-cp"><i class="fab fa-lg first-logo fa-codepen"></i><i class="fab fa-lg second-logo fa-codepen"></i></button>
-              <button class="btn-tw"><i class="fab fa-lg first-logo fa-twitter"></i><i class="fab fa-lg second-logo fa-twitter"></i></button>
-              <button class="btn-fb"><i class="fab fa-lg first-logo fa-facebook-f"></i><i class="fab fa-lg second-logo fa-facebook-f"></i></button>
-              <button class="btn-ig"><i class="fab fa-lg first-logo fa-instagram"></i><i class="fab fa-lg second-logo fa-instagram"></i></button>
+              <a href="https://twitter.com/discord">
+              	<button class="btn-tw"><i class="fab fa-lg first-logo fa-twitter"></i><i class="fab fa-lg second-logo fa-twitter"></i></button>
+              </a>
+              <a href="https://www.facebook.com/discord/">
+              	<button class="btn-fb"><i class="fab fa-lg first-logo fa-facebook-f"></i><i class="fab fa-lg second-logo fa-facebook-f"></i></button>
+              </a>
+              <a href="https://www.instagram.com/discord/">
+              	<button class="btn-ig"><i class="fab fa-lg first-logo fa-instagram"></i><i class="fab fa-lg second-logo fa-instagram"></i></button>
+              </a>
+              
           </section>
           <!-- Media Button Element -->
           <!-- ==================== -->
