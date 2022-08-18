@@ -199,11 +199,13 @@ ul{
 }
     
 .chatAndFriendheader li p{
-    font-size: 15.5px;
     float: left;
     margin-top: 9px;
     margin-left: 5px;
     cursor: pointer;
+    font-size: x-large;
+   	font-style: italic;
+   	color: #B9BBBE;
 }
     
 .chatAndFriendheader li {
