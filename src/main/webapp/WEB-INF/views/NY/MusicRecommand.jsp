@@ -7,10 +7,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/music.js" rel="">
+<link href="NY/css/MusicRecommand.css" rel="stylesheet">
+<!-- <link href="js/music.js" rel=""> -->
 <meta charset="UTF-8">
 <title>음악페이지</title>
-<link href="NY/css/MusicRecommand.css" rel="stylesheet">
 </head>
 <body>
 <div class="MusicPage">
@@ -125,22 +125,22 @@
 							<!-- https://music.youtube.com/playlist?list=PLTuUy-Y4gMbZ5bJqO9GNTabcltOJD6SHo -->
 							</li> 
 							<li>
-								<img src="NY/img/recommandImg/alonelove/aloneloveImg_4.jpg" class="KeyImg" id="aloneloveList_4" onclick="F_aloneloveList4_Iframe()">
+								<img src="NY/img/recommandImg/alonelove/aloneloveImg_4.jpg" class="KeyImg" id="aloneloveList_4">
 								<p><span>그냥</span><br>히라</p>
 							<!-- https://music.youtube.com/playlist?list=PL9StwatIujD4dXaMH8mHf-8GX3Lx16GX5 -->
 							</li> 
 							<li>
-								<img src="NY/img/recommandImg/alonelove/aloneloveImg_5.jpg" class="KeyImg" id="aloneloveList_5" onclick="F_aloneloveList5_Iframe()">
+								<img src="NY/img/recommandImg/alonelove/aloneloveImg_5.jpg" class="KeyImg" id="aloneloveList_5">
 								<p><span>😬💗</span><br>SIWON KIM</p>
 							<!-- https://music.youtube.com/playlist?list=PLtTWdpTTFqZ3c3XN9jwBdOa-njNXcV09f -->
 							</li> 
 							<li>
-								<img src="NY/img/recommandImg/alonelove/aloneloveImg_6.jpg" class="KeyImg" id="aloneloveList_6" onclick="F_aloneloveList6_Iframe()">
+								<img src="NY/img/recommandImg/alonelove/aloneloveImg_6.jpg" class="KeyImg" id="aloneloveList_6" >
 								<p><span>황미애</span><br>베리브라운</p>
 							<!-- https://music.youtube.com/playlist?list=PLtpMMp6P5aNZOinVwNvz6hKgFUvn_75Pm -->
 							</li> 
 							<li>
-								<img src="NY/img/recommandImg/alonelove/aloneloveImg_7.jpg" class="KeyImg" id="aloneloveList_7" onclick="F_aloneloveList7_Iframe()">
+								<img src="NY/img/recommandImg/alonelove/aloneloveImg_7.jpg" class="KeyImg" id="aloneloveList_7">
 								<p><span>절절</span><br>YeonSook Hyun</p>
 							<!-- https://music.youtube.com/playlist?list=PLte-jRgLRogJfpAQA8z8-SSSUdhGsJJ0H -->
 							</li>
@@ -167,17 +167,17 @@
 							<!-- https://music.youtube.com/playlist?list=PLFTljmaaq3TJrktMrwZIouPbvJvpRdeHC -->
 							</li> 
 							<li>
-								<img src="NY/img/recommandImg/popstar/PopArtistImg_5.jpg" class="KeyImg" id="PopArtistList_5" onclick="F_PopArtistList5_Iframe()">
+								<img src="NY/img/recommandImg/popstar/PopArtistImg_5.jpg" class="KeyImg" id="PopArtistList_5">
 								<p><span>Dua Lipa</span><br>taiho yoo</p>
 							<!-- https://music.youtube.com/playlist?list=PLu1-NsqAZi8HPsWBePGm6rXSzrywPApNw -->
 							</li> 
 							<li>
-								<img src="NY/img/recommandImg/popstar/PopArtistImg_6.jpg" class="KeyImg" id="PopArtistList_6" onclick="F_PopArtistList6_Iframe()">
+								<img src="NY/img/recommandImg/popstar/PopArtistImg_6.jpg" class="KeyImg" id="PopArtistList_6">
 								<p><span>Lauv</span><br>chanwoong4me</p>
 							<!-- https://music.youtube.com/playlist?list=PLZ0PXHuZvKMxIguTmtrsfcz6SLSir40yX -->
 							</li> 
 							<li>
-								<img src="NY/img/recommandImg/popstar/PopArtistImg_7.jpg" class="KeyImg" id="PopArtistList_7" onclick="F_PopArtistList7_Iframe()">
+								<img src="NY/img/recommandImg/popstar/PopArtistImg_7.jpg" class="KeyImg" id="PopArtistList_7">
 								<p><span>Justin Bieber</span><br>밍쿠</p>
 							<!-- https://music.youtube.com/playlist?list=PLSRJsTW0UbUxsRFbVMBRwFGjKIh1nURxo -->
 							</li>
@@ -204,39 +204,39 @@
 							<!-- https://music.youtube.com/watch?v=9e-jcTNFZiw&list=PLCeBnfR2pp-94hr7qc0i4CNfFm_lp9vgt -->
 							</li> 
 							<li>
-								<img src="NY/img/recommandImg/Relax/RelaxImg_5.jpg" class="KeyImg" id="RelaxList_5" onclick="F_RelaxList5_Iframe()">
+								<img src="NY/img/recommandImg/Relax/RelaxImg_5.jpg" class="KeyImg" id="RelaxList_5">
 								<p><span>일소라 차트</span><br>KYLE</p>
 							<!-- https://music.youtube.com/playlist?list=PLM2r05RQ64_oSme66CRKm_qnxGQMrJNCZ -->
 							</li> 
 							<li>
-								<img src="NY/img/recommandImg/Relax/RelaxImg_6.jpg" class="KeyImg" id="RelaxList_6" onclick="F_RelaxList6_Iframe()">
+								<img src="NY/img/recommandImg/Relax/RelaxImg_6.jpg" class="KeyImg" id="RelaxList_6">
 								<p><span>힘들때</span><br>무진</p>
 							<!-- https://music.youtube.com/playlist?list=PLanSAF4vpi9IiX5GKjJ-lk8C2LGOdsG9C -->
 							</li> 
 							<li>
-								<img src="NY/img/recommandImg/Relax/RelaxImg_7.jpg" class="KeyImg" id="RelaxList_7" onclick="F_RelaxList7_Iframe()">
+								<img src="NY/img/recommandImg/Relax/RelaxImg_7.jpg" class="KeyImg" id="RelaxList_7" >
 								<p><span>힐링 가요</span><br>Junho Lee</p>
 							<!-- https://music.youtube.com/playlist?list=PLiqSviI_3Qp86Ez9QnXl5mxwjtGM37LVX -->
 							</li>
 						</ul>
 						<ul class="AniOSTList" style="display: none;">
 							<li>
-								<img src="NY/img/recommandImg/AniOST/AniOSTImg_1.jpg" class="KeyImg" id="AniOSTList_1" onclick="F_AniOSTList1_Iframe()">
+								<img src="NY/img/recommandImg/AniOST/AniOSTImg_1.jpg" class="KeyImg" id="AniOSTList_1" >
 								<p><span>스파이패밀리 </span><br>손예</p>
 							<!-- https://music.youtube.com/playlist?list=PL1-UWLSdQLnECGy1W-F9mbJnMl-XlaDVi -->
 							</li> 
 							<li>
-								<img src="NY/img/recommandImg/AniOST/AniOSTImg_2.jpg" class="KeyImg" id="AniOSTList_2" onclick="F_AniOSTLis2_Iframe()">
+								<img src="NY/img/recommandImg/AniOST/AniOSTImg_2.jpg" class="KeyImg" id="AniOSTList_2" >
 								<p><span>날씨의 이름은</span><br>애니가좋아</p>
 							<!-- https://music.youtube.com/playlist?list=PLmJbWimcTNe8gm3PW4mV6oN2eeXJxW5_Q -->
 							</li> 
 							<li>
-								<img src="NY/img/recommandImg/AniOST/AniOSTImg_3.jpg" class="KeyImg" id="AniOSTList_3" onclick="F_AniOSTLis3_Iframe()">
+								<img src="NY/img/recommandImg/AniOST/AniOSTImg_3.jpg" class="KeyImg" id="AniOSTList_3">
 								<p><span>04년생의 애니</span><br>딤셺</p>
 							<!-- https://music.youtube.com/watch?v=vh4IlhtwHeI&list=PLYpdtfYWZmDzQxAyb1fsj_sg0jDZjjQ6D -->
 							</li> 
 							<li>
-								<img src="NY/img/recommandImg/AniOST/AniOSTImg_4.jpg" class="KeyImg" id="AniOSTList_4" onclick="F_AniOSTList4_Iframe()">
+								<img src="NY/img/recommandImg/AniOST/AniOSTImg_4.jpg" class="KeyImg" id="AniOSTList_4">
 								<p><span>귀멸의 칼날</span><br>이범수</p>
 							<!-- https://music.youtube.com/watch?v=I_HU7gx6IHA&list=PLSwa-VwS0-mdbOREb-DsOP-vuzRhuTMXS -->
 							</li> 
@@ -258,22 +258,22 @@
 						</ul>
 						<ul class="ExerciseList" style="display: none;">
 							<li>
-								<img src="NY/img/recommandImg/Exercise/ExerciseImg_1.jpg" class="KeyImg" id="ExerciseList_1" onclick="F_ExerciseList1_Iframe()">
+								<img src="NY/img/recommandImg/Exercise/ExerciseImg_1.jpg" class="KeyImg" id="ExerciseList_1">
 								<p><span>뼛속까지 단단하게</span><br>손예</p>
 							<!-- https://music.youtube.com/watch?v=Ut6ZaXqnj1c&list=PLqvvUcaq_0OnDIjjL7QzuU-idiRqVx1M5 -->
 							</li> 
 							<li>
-								<img src="NY/img/recommandImg/Exercise/ExerciseImg_2.jpg" class="KeyImg" id="ExerciseList_2" onclick="F_ExerciseList2_Iframe()">
+								<img src="NY/img/recommandImg/Exercise/ExerciseImg_2.jpg" class="KeyImg" id="ExerciseList_2">
 								<p><span>운동1</span><br>이동현</p>
 							<!-- https://music.youtube.com/playlist?list=PL4fQaQrmnpKD8IEhkVNU3L6t6-a5NaV01-->
 							</li> 
 							<li>
-								<img src="NY/img/recommandImg/Exercise/ExerciseImg_3.jpg" class="KeyImg" id="ExerciseList_3" onclick="F_ExerciseList3_Iframe()">
+								<img src="NY/img/recommandImg/Exercise/ExerciseImg_3.jpg" class="KeyImg" id="ExerciseList_3" >
 								<p><span>Exercising</span><br>괜사</p>
 							<!-- https://music.youtube.com/playlist?list=PLghrVNacHnKnhZssAkorf5ryA0PtDoI-J -->
 							</li> 
 							<li>
-								<img src="NY/img/recommandImg/Exercise/ExerciseImg_4.jpg" class="KeyImg" id="ExerciseList_4" onclick="F_ExerciseList4_Iframe()">
+								<img src="NY/img/recommandImg/Exercise/ExerciseImg_4.jpg" class="KeyImg" id="ExerciseList_4">
 								<p><span>애플top100</span><br>junbe jo</p>
 							<!-- https://music.youtube.com/playlist?list=PLw-dGKf44Qdzq6XxILhp0IsNczdYHgvHr-->
 							</li> 
@@ -295,22 +295,22 @@
 						</ul>
 						<ul class="leaveworkList" style="display: none;">
 							<li>
-								<img src="NY/img/recommandImg/leavework/leaveworkImg_1.jpg" class="KeyImg" id="leaveworkList_1" onclick="F_leaveworkList1_Iframe()">
+								<img src="NY/img/recommandImg/leavework/leaveworkImg_1.jpg" class="KeyImg" id="leaveworkList_1">
 								<p><span>산뜻한 초저녁</span><br>무</p>
 							<!-- https://music.youtube.com/playlist?list=PLJ9y6MY8l9DirjA8ptVi2pwQkxrb0X2jD -->
 							</li> 
 							<li>
-								<img src="NY/img/recommandImg/leavework/leaveworkImg_2.jpg" class="KeyImg" id="leaveworkList_2" onclick="F_leaveworkList2_Iframe()">
+								<img src="NY/img/recommandImg/leavework/leaveworkImg_2.jpg" class="KeyImg" id="leaveworkList_2">
 								<p><span>뚝섬 11번출구</span><br>조성민</p>
 							<!-- https://music.youtube.com/playlist?list=PLu1e8X5bKBImReD_-G1zQzvXMA7_7Z7Yb-->
 							</li> 
 							<li>
-								<img src="NY/img/recommandImg/leavework/leaveworkImg_3.jpg" class="KeyImg" id="leaveworkList_3" onclick="F_leaveworkList3_Iframe()">
+								<img src="NY/img/recommandImg/leavework/leaveworkImg_3.jpg" class="KeyImg" id="leaveworkList_3" >
 								<p><span>회사뿌셔</span><br>수연</p>
 							<!-- https://music.youtube.com/watch?v=UznsP7hLWKc&list=PLdfZbgOpp0BcOMlmqIgUPvpc_RihX5JsD -->
 							</li> 
 							<li>
-								<img src="NY/img/recommandImg/leavework/leaveworkImg_4.jpg" class="KeyImg" id="leaveworkList_4" onclick="F_leaveworkList4_Iframe()">
+								<img src="NY/img/recommandImg/leavework/leaveworkImg_4.jpg" class="KeyImg" id="leaveworkList_4" >
 								<p><span>BLACKPINK</span><br>MrMusicStart</p>
 							<!-- https://music.youtube.com/playlist?list=PLA98OzH9gllk4vSheFsMYrZJ9-1hLOANn-->
 							</li> 

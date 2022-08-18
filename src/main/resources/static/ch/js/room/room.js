@@ -87,11 +87,13 @@ function goRoom(code, id, room){
 
 function getChat(res) {
 	var msg = { 
-		name : $("#name").val(),
+		name : $("#username").val(),
 		userId : $('#userId').val(),
 		channelCode : res.channelCode,
 		roomCode : res.roomCode
 			};
+			
+	console.log(JSON.stringify(msg));
 	commonAjax('/getChat', msg , 'post', function(result){
 		createChat(result);
 	});

@@ -77,26 +77,7 @@ function F_aloneloveList3_Iframe(){
 	$("#aloneloveList_3Iframe").attr("style","display:block");
     console.log(88);
 }
-function F_aloneloveList4_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#aloneloveList_4Iframe").attr("style","display:block");
-    console.log(88);
-}
-function F_aloneloveList5_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#aloneloveList_5Iframe").attr("style","display:block");
-    console.log(88);
-}
-function F_aloneloveList6_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#aloneloveList_6Iframe").attr("style","display:block");
-    console.log(88);
-}
-function F_aloneloveList7_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#aloneloveList_7Iframe").attr("style","display:block");
-    console.log(88);
-}
+
 
 /*PopArtistList*/
 function F_PopArtistList1_Iframe(){
@@ -117,21 +98,6 @@ function F_PopArtistList3_Iframe(){
 function F_PopArtistList4_Iframe(){
 	$(".PlayListIframe").children('iframe').attr("style","display:none");
 	$("#PopArtistList_4Iframe").attr("style","display:block");
-    console.log(88);
-}
-function F_PopArtistList5_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#PopArtistList_5Iframe").attr("style","display:block");
-    console.log(88);
-}
-function F_PopArtistList6_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#PopArtistList_6Iframe").attr("style","display:block");
-    console.log(88);
-}
-function F_PopArtistList7_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#PopArtistList_7Iframe").attr("style","display:block");
     console.log(88);
 }
 
@@ -156,43 +122,10 @@ function F_RelaxList4_Iframe(){
 	$("#RelaxList_4Iframe").attr("style","display:block");
     console.log(88);
 }
-function F_RelaxList5_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#RelaxList_5Iframe").attr("style","display:block");
-    console.log(88);
-}
-function F_RelaxList6_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#RelaxList_6Iframe").attr("style","display:block");
-    console.log(88);
-}
-function F_RelaxList7_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#RelaxList_7Iframe").attr("style","display:block");
-    console.log(88);
-}
+
 
 /* */
-function F_AniOSTList1_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#AniOSTList_1Iframe").attr("style","display:block");
-    console.log(88);
-}
-function F_AniOSTList2_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#AniOSTList_2Iframe").attr("style","display:block");
-    console.log(88);
-}
-function F_AniOSTList3_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#AniOSTList_3Iframe").attr("style","display:block");
-    console.log(88);
-}
-function F_AniOSTList4_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#AniOSTList_4Iframe").attr("style","display:block");
-    console.log(88);
-}
+
 function F_AniOSTList5_Iframe(){
 	$(".PlayListIframe").children('iframe').attr("style","display:none");
 	$("#AniOSTList_5Iframe").attr("style","display:block");
@@ -214,26 +147,6 @@ function F_AniOSTList7_Iframe(){
 
 
 /* ExerciseList */
-function F_ExerciseList1_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#ExerciseList_1Iframe").attr("style","display:block");
-    console.log(88);
-}
-function F_ExerciseList2_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#ExerciseList_2Iframe").attr("style","display:block");
-    console.log(88);
-}
-function F_ExerciseList3_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#ExerciseList_3Iframe").attr("style","display:block");
-    console.log(88);
-}
-function F_ExerciseList4_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#ExerciseList_4Iframe").attr("style","display:block");
-    console.log(88);
-}
 function F_ExerciseList5_Iframe(){
 	$(".PlayListIframe").children('iframe').attr("style","display:none");
 	$("#ExerciseList_5Iframe").attr("style","display:block");
@@ -254,26 +167,7 @@ function F_ExerciseList7_Iframe(){
 
 
 /* leaveworkList */
-function F_leaveworkList1_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#leaveworkList_1Iframe").attr("style","display:block");
-    console.log(88);
-}
-function F_leaveworkList2_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#leaveworkList_2Iframe").attr("style","display:block");
-    console.log(88);
-}
-function F_leaveworkList3_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#leaveworkList_3Iframe").attr("style","display:block");
-    console.log(88);
-}
-function F_leaveworkList4_Iframe(){
-	$(".PlayListIframe").children('iframe').attr("style","display:none");
-	$("#leaveworkList_4Iframe").attr("style","display:block");
-    console.log(88);
-}
+
 function F_leaveworkList5_Iframe(){
 	$(".PlayListIframe").children('iframe').attr("style","display:none");
 	$("#leaveworkList_5Iframe").attr("style","display:block");

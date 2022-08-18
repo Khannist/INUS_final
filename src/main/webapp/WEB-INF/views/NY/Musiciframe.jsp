@@ -5,7 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="NY/css/Musiciframe.css" rel="stylesheet">
 </head>
 <body>
 <div class="PlayListIframe">
@@ -114,6 +113,7 @@
 	
 	
 	<!-- 짝사랑 -->
+	<!-- 앞에 3개 가능 -->
 	<iframe
 		id="aloneloveList_1Iframe"
 		width="560"
@@ -141,44 +141,12 @@
 		allow="autoplay; encrypted-media" 
 		allowfullscreen
 	></iframe>
-	<iframe
-		id="aloneloveList_4Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PL9StwatIujD4dXaMH8mHf-8GX3Lx16GX5&feature=share" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
-	<iframe
-		id="aloneloveList_5Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PLtTWdpTTFqZ3c3XN9jwBdOa-njNXcV09f&feature=share" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
-	<iframe
-		id="aloneloveList_6Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PLtpMMp6P5aNZOinVwNvz6hKgFUvn_75Pm&feature=share" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
-	<iframe
-		id="aloneloveList_7Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PLte-jRgLRogJfpAQA8z8-SSSUdhGsJJ0H&feature=share" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
+
+
+	
 	
 	<!-- PopArtistList -->
+	<!-- 앞에4개 가능 -->
 	<iframe
 		id="PopArtistList_1Iframe"
 		width="560"
@@ -215,35 +183,12 @@
 		allow="autoplay; encrypted-media" 
 		allowfullscreen
 	></iframe>
-	<iframe
-		id="PopArtistList_5Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PLu1-NsqAZi8HPsWBePGm6rXSzrywPApNw" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
-	<iframe
-		id="PopArtistList_6Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PLZ0PXHuZvKMxIguTmtrsfcz6SLSir40yX" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
-	<iframe
-		id="PopArtistList_7Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PLSRJsTW0UbUxsRFbVMBRwFGjKIh1nURxo" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
+
+
+
 	
 	<!-- RelaxList -->
+	<!-- 앞에4개 가능 -->
 	<iframe
 		id="RelaxList_1Iframe"
 		width="560"
@@ -280,71 +225,11 @@
 		allow="autoplay; encrypted-media" 
 		allowfullscreen
 	></iframe>
-	<iframe
-		id="RelaxList_5Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PLM2r05RQ64_oSme66CRKm_qnxGQMrJNCZ&feature=share" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
-	<iframe
-		id="RelaxList_6Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PLanSAF4vpi9IiX5GKjJ-lk8C2LGOdsG9C&feature=share" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
-	<iframe
-		id="RelaxList_7Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PLiqSviI_3Qp86Ez9QnXl5mxwjtGM37LVX" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
+
 	
 	<!-- AniOSTList -->
-	<iframe
-		id="AniOSTList_1Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PL1-UWLSdQLnECGy1W-F9mbJnMl-XlaDVi" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
-	<iframe
-		id="AniOSTList_2Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PLmJbWimcTNe8gm3PW4mV6oN2eeXJxW5_Q" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
-	<iframe
-		id="AniOSTList_3Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PLYpdtfYWZmDzQxAyb1fsj_sg0jDZjjQ6D" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
-	<iframe
-		id="AniOSTList_4Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PLSwa-VwS0-mdbOREb-DsOP-vuzRhuTMXS&feature=share" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
+	<!-- 뒤에 3개 ㄱㄴ -->
+
 	<iframe
 		id="AniOSTList_5Iframe"
 		width="560"
@@ -373,43 +258,11 @@
 		allowfullscreen
 	></iframe>
 	
+	
+	
 	<!-- ExerciseList -->
-	<iframe
-		id="ExerciseList_1Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PLqvvUcaq_0OnDIjjL7QzuU-idiRqVx1M5&feature=share" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
-	<iframe
-		id="ExerciseList_2Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PLghrVNacHnKnhZssAkorf5ryA0PtDoI-J" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
-	<iframe
-		id="ExerciseList_3Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PLLmwQXGbsQmYOxtzGd68WS4tWwAZoz44r&feature=share" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
-	<iframe
-		id="ExerciseList_4Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PLw-dGKf44Qdzq6XxILhp0IsNczdYHgvHr&feature=share" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
+	<!-- 뒤에 3개 ㄱㄴ -->
+	
 	<iframe
 		id="ExerciseList_5Iframe"
 		width="560"
@@ -438,43 +291,10 @@
 		allowfullscreen
 	></iframe>
 	
+	
+	
 	<!-- leaveworkList -->
-	<iframe
-		id="leaveworkList_1Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PLJ9y6MY8l9DirjA8ptVi2pwQkxrb0X2jD&feature=share" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
-	<iframe
-		id="leaveworkList_2Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PLu1e8X5bKBImReD_-G1zQzvXMA7_7Z7Yb&feature=share" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
-	<iframe
-		id="leaveworkList_3Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PLdfZbgOpp0BcOMlmqIgUPvpc_RihX5JsD&feature=share" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
-	<iframe
-		id="leaveworkList_4Iframe"
-		width="560"
-		height="315" 
-		src="https://www.youtube.com/embed/videoseries?list=PLA98OzH9gllk4vSheFsMYrZJ9-1hLOANn" 
-		frameborder="0" 
-		allow="autoplay; encrypted-media" 
-		allowfullscreen
-	></iframe>
+	<!-- 뒤에 3개 ㄱㄴ -->
 	<iframe
 		id="leaveworkList_5Iframe"
 		width="560"

@@ -33,8 +33,9 @@ function channelCreateName(){ // 채널 생성
 		commonAjax('/createChannel', msg, 'post', function(result){
 			createChatingChannel(result);
 		});
-		var con = document.getElementById("channelNameInput");
-		con.style.display = "none";
+		document.getElementById("channelNameInput").style.display = "none";
+		
+    	document.getElementById("bigDiv").style.display = "none";
 		$("input#channelName").val("");
 		$("#channelName").attr("placeholder", "채널 이름 입력");
 	}
@@ -52,7 +53,6 @@ function goChannel(code, name, id, chanName){
 		userId : id,
 		roomNumber : "1"
 	}
-	
 	$("#channelCode").val(code);
 	
 	commonAjax('/moveRoom', msg, 'post', function(result){
@@ -65,11 +65,11 @@ function goChannel(code, name, id, chanName){
 }
 
 function createChatingChannel(res){
-	if(res != null){ // 채팅방이 있을시
+	if(res != null){
 		var tag = "";
-		if(res.list) { // res에 list 리스트가 있을시
-			res.list.forEach(function(d){ // 길이만큼 반복
-				$("#channelCode").val(d.channelCode); // d번째 channelCode값 입력
+		if(res.list) {
+			res.list.forEach(function(d){
+				$("#channelCode").val(d.channelCode);
 				var cn = d.channelName;
 				tag += "<li onclick='goChannel(\""+d.channelCode+"\", \""+cn+"\",\""+d.userId+"\",\""+d.channelList+"\")' "+
 				" id='"+ d.channelList +"' class='channel'>"+
@@ -82,7 +82,7 @@ function createChatingChannel(res){
 			
 			$("#channelSpace").empty().append(tag);
 		}
-		if(Object.keys(res).length === 0) { //채널 삭제시 채널이 없을 경우 실행되는 코드
+		if(Object.keys(res).length === 0) {
 			$("#channelSpace").empty();
 			$("#roomList").empty();
 			$("#ChatName").empty().text("채팅방이름");
@@ -93,9 +93,9 @@ function createChatingChannel(res){
 			$("#" + $("#TchannelList").val()).click();
 			$("#TchannelList").val("");
 		}else {
-			if($("#roomList").children().length == 0) { // 채팅방이 없을경우 제일 처음 채팅채널을 선택하게 하는 코드
+			if($("#roomList").children().length == 0) {
 				$("ul#channelSpace").children(":eq(0)").trigger("click");		
-			}else { // 채팅채널을 새로 생성할시 생성한 채널로 이동하는 코드
+			}else {
 				$("ul#channelSpace").children(":eq(" + ($("ul#channelSpace").children().length-1) + ")").trigger("click");
 				
 			}			

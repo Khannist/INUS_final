@@ -28,9 +28,6 @@ public class CommentController {
 	@RequestMapping("/InsertComment")
 	public  ModelAndView InsertComment(CommentVo vo) throws Exception{
 		ModelAndView mv = new ModelAndView();
-		System.out.println(vo.getInus_boardNum());
-		System.out.println("vo");
-		System.out.println(vo.getInus_commentNum());
 		sqlSession.insert("com.inus.board.CommentMapper.CommentRegist", vo);
 		mv.addObject("inus_boardNum", vo.getInus_boardNum());
 		mv.addObject("inus_commentNum", vo.getInus_commentNum());
