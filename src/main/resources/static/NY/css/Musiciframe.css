@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+
+
+.PlayListIframe iframe{
+	display: none;
+	margin: 60px 20px 3px 20px;
+}
+
+#KoreaTop100Iframe{
+	display: block;
+}

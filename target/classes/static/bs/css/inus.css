@@ -199,13 +199,30 @@ ul{
 }
     
 .chatAndFriendheader li p{
-    font-size: 15.5px;
+	font-size: 15.5px;
     float: left;
     margin-top: 9px;
     margin-left: 5px;
     cursor: pointer;
 }
-    
+#friendMember {
+	float: left;
+    margin-top: 14px;
+    margin-left: 5px;
+    cursor: pointer;
+    color: #B9BBBE;
+    font-style: oblique;
+    font-size: x-large;
+}
+
+#friendMember:hover{
+	background-color: #B9BBBE;
+	color: white;
+}
+
+.friend ul li:hover{
+	background-color: #B9BBBE;
+} 
 .chatAndFriendheader li {
     clear: both;
    margin-top: 10px;
@@ -253,10 +270,13 @@ ul{
 
 /*여기까지*/
 
-
 .update{
-	margin-left:340px;
+	margin-left:330px;
 }
+.delete{
+	margin-left:10px;
+}
+
 
 
 

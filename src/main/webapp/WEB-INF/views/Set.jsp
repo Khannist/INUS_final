@@ -14,6 +14,8 @@
 	<sec:authentication property="principal.userId" var="userid" />
 	<sec:authentication property="principal.nickname" var="username" />
 	<sec:authentication property="principal.email" var="useremail" />
+	<input type="hidden" id="userId" name="userId" value="${userid}">
+	<input type="hidden" name="username" id="username" value="${username}">
 </sec:authorize>
 	<div class="container">
 		<div class="SetLbar">
@@ -60,7 +62,9 @@
 							<div class="midProfile">
 								<img src="NY/img/icon/profileIcon.png" id="BigProfile">
 								<p id="BiguserName">${userid}</p>
-								<button type="submit" id="userProfileReplace" onclick="F_ProfileSet()">사용자 프로필 편집</button>
+								<p onclick="F_ProfileSet()">
+									<button  type="submit" id="userProfileReplace" >사용자 프로필 편집</button>
+								</p>
 							</div>
 							<div class="profileInpo">
 										<div class="profileBottom">
@@ -125,7 +129,7 @@
 							<h3>미리 보기</h3>
 							<div class="smallprofileBackG">
 								<div class="smallprofileMID">
-									<img alt="" src="NY/img/icon/profileIcon.png">
+									<img alt="" src="https://source.unsplash.com/random">
 									<p id="smallname">list.name</p>
 									<p id="smallAly">내 프로필 꾸미기</p>
 								</div>

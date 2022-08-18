@@ -31,6 +31,8 @@ function createRoomName(res) {
 function createServer(){	
 	var con = document.getElementById("channelNameInput");
     con.style.display = (con.style.display != 'none') ? "none" : "inline-block";
+    var big = document.getElementById("bigDiv");
+    big.style.display = (big.style.display != 'none') ? "none" : "inline-block";
 }
 
 function channelCreateName(){
@@ -47,9 +49,9 @@ function channelCreateName(){
 			createRoomName(result);
 		});
 		
-		document.getElementById("channelNameInput").style.display = "none";
+		createServer();
 		$("input#channelName").val("");
-		$("#channelName").attr("placeholder", "채널 이름 입력");
+		$("#channelName").attr("placeholder", $("#username").val()+"님의 서버");
 		
 	}
 }

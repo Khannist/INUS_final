@@ -65,6 +65,7 @@ public class CommentController {
 		res.setCharacterEncoding("UTF-8");
 		res.getWriter().print(gson.toJson(data));
 	}
+	
 }
 //@RequestMapping("/getRoom")
 //public @ResponseBody void getRoom(HttpServletResponse res, Room room) throws Exception{

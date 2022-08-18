@@ -28,7 +28,6 @@
  <sec:authorize access="isAuthenticated()">
    <sec:authentication property="principal.userId" var="userid" />
    <sec:authentication property="principal.nickname" var="username" />
-   <sec:authentication property="principal.email" var="useremail" />
    <input type="hidden" id="userId" name="userId" value="${userid}">
    <input type="hidden" name="username" id="username" value="${username}">
 </sec:authorize>
@@ -60,7 +59,9 @@
                   <input type="button" value="생성">
                </div>
          </div>
-               
+         <div>
+         	<ul id="friend" class="friend"></ul>
+         </div> 
        </div>
    </div>
    </article>
@@ -108,6 +109,7 @@ function F_closeFReReplace(){
                         <img class="user-thumb" src="https://storage.googleapis.com/mkts/walter.jpg" alt="Walter">
                         <div class="user-details">
                             <strong class="name">${boardView.nickname}</strong>
+                            <span class="location"><i class="fa-solid fa-eye"></i>17</span>
                         </div>
                         <div class="post-menu">
                             <span class="menu">&nbsp;</span>
@@ -213,6 +215,7 @@ function F_closeFReReplace(){
 </script>
 <jsp:include page="../ch/roomchannel/addChannel.jsp"></jsp:include>
 <script type="text/javascript" src="/ch/js/channel/mainchannel.js"></script>
+<script type="text/javascript" src="/sh/js/flist.js"></script>
 <script type="text/javascript" src="bs/js/reply.js"></script>
 </body>
 </html>

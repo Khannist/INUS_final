@@ -13,18 +13,12 @@
 </head>
 <body>
 
-<!-- 	<div></div>
-	<input type="text" class="SearchInput" id="search_Input" value="검색어를 입력해주세요">
-    <input type="button" class="SearchInput" id="search_Button" onclick="Search()"> 
-	<img class="ToIMG" id="ToMusic" src="ny/img/icon/ToMusicList.png" onclick="F_ToMusicList()">
- -->
-
 	<div class="SearchHeader">
 		<div class="SearchInput">
 			<input type="text" id="search_Input" placeholder="Search here...">
 			<button type="submit" id="search_Button" onclick="Search()">Search</button>
 	    </div>
-	    <img class="ToIMG" id="ToMusic" src="NY/img/icon/ToMusicList.png" onclick="F_ToFriendList()">
+	    <img class="ToIMG" id="ToMusic" src="NY/img/icon/ToMusicList.png" onclick="F_ToMusicRe()">
 	</div>
 	<div class="ScrollClass">
 		<div class="iframe01_li">

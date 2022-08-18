@@ -16,6 +16,9 @@ function getChannel(){ // 채널 리스트 출력
 function createServer(){	// 클릭시 채널 생성페이지
 	var con = document.getElementById("channelNameInput");
     con.style.display = (con.style.display != 'none') ? "none" : "inline-block";
+	var big = document.getElementById("bigDiv");
+    big.style.display = (big.style.display != 'none') ? "none" : "inline-block";
+
 }
 		
 function channelCreateName(){ // 채널 생성
@@ -79,7 +82,7 @@ function createChatingChannel(res){
 			
 			$("#channelSpace").empty().append(tag);
 		}
-		if(Object.keys(res).length === 0) {
+		if(Object.keys(res).length === 0) { //채널 삭제시 채널이 없을 경우 실행되는 코드
 			$("#channelSpace").empty();
 			$("#roomList").empty();
 			$("#ChatName").empty().text("채팅방이름");
@@ -90,9 +93,9 @@ function createChatingChannel(res){
 			$("#" + $("#TchannelList").val()).click();
 			$("#TchannelList").val("");
 		}else {
-			if($("#roomList").children().length == 0) {
+			if($("#roomList").children().length == 0) { // 채팅방이 없을경우 제일 처음 채팅채널을 선택하게 하는 코드
 				$("ul#channelSpace").children(":eq(0)").trigger("click");		
-			}else {
+			}else { // 채팅채널을 새로 생성할시 생성한 채널로 이동하는 코드
 				$("ul#channelSpace").children(":eq(" + ($("ul#channelSpace").children().length-1) + ")").trigger("click");
 				
 			}			

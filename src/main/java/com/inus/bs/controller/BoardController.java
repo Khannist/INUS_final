@@ -48,6 +48,7 @@ public class BoardController {
 		System.out.println(444);
 		System.out.println(bVo);
 		List<BoardVo> boardList = sqlSession.selectList("com.inus.board.getBoard");
+		System.out.println("boardList = " + boardList);
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("boardList",boardList);
 		mv.setViewName("bs/boardList");
@@ -68,14 +69,32 @@ public class BoardController {
 	
 	// 게시글 상세보기
 	@RequestMapping("/boardView")
-	public String boardView(Model model , BoardVo bVo) {
-		
-		List<BoardVo> boardView = sqlSession.selectList("com.inus.board.getView",bVo);
-		model.addAttribute("boardView",boardView);
-		sqlSession.update("com.inus.board.boardCount",bVo);
-		return "bs/boardView";
+	public String boardView(Model model ,
+			@RequestParam("inus_boardNum") int inus_boardNum) {
+			System.out.println(inus_boardNum);
+			
+			BoardVo bVo = new BoardVo();
+			bVo.setInus_boardNum(inus_boardNum);
+			System.out.println(bVo);
+			System.out.println(inus_boardNum);
+			List<BoardVo> boardView = sqlSession.selectList("com.inus.board.getView",bVo);
+			System.out.println(boardView);
+			
+			model.addAttribute("boardView",boardView);
+			System.out.println(boardView);
+			
+			sqlSession.update("com.inus.board.boardCount",bVo);
+			return "bs/boardView";
 	}
-	
+	// 게시글 상세보기
+//		@RequestMapping("/boardView")
+//		public String boardView(Model model , BoardVo bVo) {
+//			
+//			List<BoardVo> boardView = sqlSession.selectList("com.inus.board.getView",bVo);
+//			model.addAttribute("boardView",boardView);
+//			sqlSession.update("com.inus.board.boardCount",bVo);
+//			return "bs/boardView";
+//		}
 	// 게시글 작성화면 보여주기
 	@RequestMapping("/boardWrite")
 	public ModelAndView boardWrite(Model model, BoardVo bVo) {
@@ -106,17 +125,12 @@ public class BoardController {
 		@PostMapping("/boardInsert")
 		public ModelAndView boardInsertImg(BoardVo bVo,
 			    @RequestParam("boardimg") MultipartFile boardimg) throws IOException {
-				System.out.println("1");
-				System.out.println(bVo);
 				if(boardimg.getBytes().length > 0) {
 					bVo.setInsertboardImg(boardimg.getBytes());					
 				}else {
 					bVo.setInsertboardImg(fileWelcome());
 				}
 				sqlSession.insert("com.inus.board.boardInsert",bVo);
-				System.out.println(bVo.getNickname());
-				System.out.println(bVo);
-				System.out.println("2");
 				ModelAndView mv = new ModelAndView();
 				
 				mv.addObject("inus_boardNum", bVo.getInus_boardNum());
@@ -166,9 +180,9 @@ public class BoardController {
 	
 	// 게시글 삭제
 	@RequestMapping("/boardDelete")
-	public String boardDelete(int inus_boardNum) {
-		sqlSession.delete("com.inus.board.boardDelete",inus_boardNum);	
-		return "redirect:boardList";
+	public String boardDelete(BoardVo bVo) {
+		sqlSession.delete("com.inus.board.boardDelete",bVo);
+		return "bs/boardList";
 	}
 	
 	public byte[] fileWelcome() {
