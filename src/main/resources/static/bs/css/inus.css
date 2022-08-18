@@ -136,7 +136,10 @@ ul{
     height: 46px;
     border: 2px solid white;
     border-radius: 50%;
-    margin-left: 6px;
+    margin-left: 0.5px;
+}
+#plusServerImg{
+	margin-left: 7px;
 }
 #channelSpace{
 	margin-left: 6px;
